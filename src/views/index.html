@@ -17,13 +17,21 @@
         <!-- react.js UI - See App.jsx -->
         <div id="app">{{ html|safe }}</div>
         
-        <!-- <script src="/vendor/hammer.min.js"></script> -->
-        
+        <!-- env vars -->
+        <script>
+            window._env = {
+                NODE_ENV: "{{NODE_ENV}}",
+            }
+        </script>
+
+        <!-- js bundle -->
         {% if NODE_ENV == "development" %}
         <script src="/dev/build.js"></script>
         {% else %}
         <script src="/dist/build.min.js"></script>
         {% endif %}
+
+       
         
     </body>
 </html>
