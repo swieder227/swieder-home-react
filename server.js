@@ -5,7 +5,7 @@ var logger = require('morgan');
 var favicon = require('serve-favicon');
 
 // Read .env config variables
-require('dotenv').config({silent: true});
+require('dotenv').config();
 
 // Babel ES6/JSX Compiler
 require('babel-register');
@@ -39,21 +39,21 @@ app.use(require('connect-livereload')());
   Example fire when url is /pure
   Appennds data to the locals var, which is bootstrapped to the alt instance and passed to the stores on client.js
 */
-app.get('/pure', function(req, res, next){
+// app.get('/pure', function(req, res, next){
   
-  res.locals.data = {
-    ExampleStore: {
-      examples : [
-        {
-          "id" : 9999,
-          "name" : "From the Server :)"
-        }
-      ]
-    }
-  }
-  next();
+//   res.locals.data = {
+//     ExampleStore: {
+//       examples : [
+//         {
+//           "id" : 9999,
+//           "name" : "From the Server :)"
+//         }
+//       ]
+//     }
+//   }
+//   next();
 
-});
+// });
 
 
 

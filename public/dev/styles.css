@@ -2,8 +2,8 @@ html, body {
   font-size: 16px;
   font-family: sans-serif; }
 
-h1 {
-  color: cyan; }
+.case-study-hero {
+  position: absolute; }
 
 .example-component {
   border: 1px solid gray;
@@ -12,5 +12,17 @@ h1 {
   margin: 1rem 0;
   background: #EBEBEB;
   box-shadow: 0 0 4px rgba(128, 128, 128, 0.4); }
+
+.portfolio-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
+.portfolio-slider__ui {
+  position: absolute;
+  bottom: 5rem;
+  left: 2rem; }
 
 /*# sourceMappingURL=styles.css.map */
