@@ -1,13 +1,34 @@
 .portfolio-slider {
+  z-index: 100;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  overflow: hidden;
 }
 
-.portfolio-slider__ui {
+.portfolio-slider__arrows {
+  z-index: 200;
   position: absolute;
-  bottom: 5rem;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.portfolio-slider__details {
+  z-index: 300;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  pointer-events: none;
+}
+
+.portfolio-slider__details-toggle {
+  z-index: 500;
+  position: absolute;
+  bottom: 2rem;
   left: 2rem;
 }

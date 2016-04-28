@@ -1,0 +1,27 @@
+.case-study-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: auto;
+
+  border: 1px solid blue;
+  background: white;
+}
+
+.case-study-details__slide-enter {
+  transform: translateY(100%);
+}
+.case-study-details__slide-enter-active {
+  transition: transform 0.5s ease-out 0s; 
+  transform: translateY(0px);
+}
+
+.case-study-details__slide-leave {
+  transform: translateY(0px);
+}
+.case-study-details__slide-leave-active {
+  transition: transform 0.5s ease-out 0s; 
+  transform: translateY(100%);
+}

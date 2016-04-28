@@ -1,3 +1,21 @@
 .case-study-hero {
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  border: 1px solid red;
+  background: white;
+}
+
+.case-study-hero__slide-enter {
+  z-index: 100;
+
+  transform: translate(100%);
+}
+.case-study-hero__slide-enter-active {
+  transition: transform 0.5s ease-out 0s;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  transform: translate(0px);
 }
