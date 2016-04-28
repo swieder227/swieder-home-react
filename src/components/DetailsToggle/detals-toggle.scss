@@ -1,0 +1,15 @@
+.detals-toggle {
+
+}
+.detals-toggle__main-btn {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  transition: transform 1s ease-in-out 0s;
+}
+
+.detals-toggle__target {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}

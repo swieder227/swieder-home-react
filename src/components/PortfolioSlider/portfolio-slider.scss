@@ -24,11 +24,21 @@
   bottom: 0;
 
   pointer-events: none;
+  & > div {
+    pointer-events: auto;
+  }
 }
 
-.portfolio-slider__details-toggle {
+.portfolio-slider__toggle-btn {
   z-index: 500;
   position: absolute;
-  bottom: 2rem;
-  left: 2rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  pointer-events: none;
+  & > div {
+    pointer-events: auto;
+  }
 }
