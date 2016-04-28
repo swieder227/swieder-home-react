@@ -14,6 +14,8 @@ class PortfolioSlider extends React.Component {
   constructor() {
     super();
 
+    this.slide_direction = "_RightToLeft";
+
     this.state = {
       show_details: false
     }
@@ -23,9 +25,8 @@ class PortfolioSlider extends React.Component {
     return [PortfolioStore]
   }
   static getPropsFromStores(props) {
-    var portfolio_state = PortfolioStore.getState();
     return {
-      case_study_active: portfolio_state.case_study_active
+      case_study_active: PortfolioStore.getState().case_study_active
     }
   }
 
@@ -35,23 +36,38 @@ class PortfolioSlider extends React.Component {
     });
   }
 
+  slideLeft(){
+    this.slide_direction = "_LeftToRight";
+    PortfolioActions.decrementCaseStudyActive();
+  }
+
+  slideRight(){
+    this.slide_direction = "_RightToLeft";
+    PortfolioActions.incrementCaseStudyActive();  
+  }
+
   render() {
-    
-    let title = <div key={this.props.case_study_active.title}>{this.props.case_study_active.title}</div>;
 
     let module_hero = <CaseStudyHero key={this.props.case_study_active.title} case_study_data={this.props.case_study_active} />;
     let module_details = this.state.show_details ? <CaseStudyDetails key={this.props.case_study_active.title} case_study_data={this.props.case_study_active} /> : '';
 
+    let slide_anim_name;
+    if(this.slide_direction == "_RightToLeft"){
+      slide_anim_name = "case-study-hero__slide-rtl";
+    } else {
+      slide_anim_name = "case-study-hero__slide-ltr";
+    }
+
     return (
       <div className="portfolio-slider">        
           <div className="portfolio-slider__hero">
-            <ReactCSSTransitionGroup transitionName="case-study-hero__slide" transitionEnterTimeout={600} transitionLeaveTimeout={600}>
+            <ReactCSSTransitionGroup transitionName={slide_anim_name} transitionEnterTimeout={600} transitionLeaveTimeout={600}>
               {module_hero}
             </ReactCSSTransitionGroup>
           </div>
           <div className="portfolio-slider__arrows">
-            <button onClick={PortfolioActions.decrementCaseStudyActive}>Back</button>
-            <button onClick={PortfolioActions.incrementCaseStudyActive}>Forward</button>
+            <button onClick={this.slideLeft.bind(this)}>Back</button>
+            <button onClick={this.slideRight.bind(this)}>Forward</button>
           </div>
           <div className="portfolio-slider__details">
             <ReactCSSTransitionGroup transitionName="case-study-details__slide" transitionEnterTimeout={600} transitionLeaveTimeout={600}>

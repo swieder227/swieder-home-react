@@ -21,17 +21,11 @@ class PortfolioStore {
     this.case_study_active = this.case_studies[this.case_study_active_index];
 
     this.bindListeners({
-      handleUpdateCaseStudyActive: PortfolioActions.updateCaseStudyActive,
       handleIncrementCaseStudyActive: PortfolioActions.incrementCaseStudyActive,
       handleDecrementCaseStudyActive: PortfolioActions.decrementCaseStudyActive,
-      // handleAppendExample: ExampleActions.APPEND_EXAMPLE
     });
   }
 
-  handleUpdateCaseStudyActive(index) {
-    this.case_study_active = this.case_studies[index];
-    this.case_study_active_index = index;
-  }
   handleIncrementCaseStudyActive(){
     let index = this.case_study_active_index;
     if(index < this.case_studies.length - 1){
