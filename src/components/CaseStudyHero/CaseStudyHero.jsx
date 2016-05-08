@@ -5,14 +5,14 @@ export default class CaseStudyHero extends React.Component {
     super();
   }
 
-  // static propTypes = {
-  //   : React.PropTypes.string
-  // };
+  static propTypes = {
+    title: React.PropTypes.string.isRequired
+  };
 
   render() {
     return (
       <div className="case-study-hero">
-        {this.props.case_study_data.title}
+        {this.props.title}
       </div>
     )
   }

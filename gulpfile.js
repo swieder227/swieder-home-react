@@ -85,7 +85,7 @@ var watcher  = watchify(browserify({
   transform: babelify.configure(
               { 
                 presets: ["es2015", "react"],
-                plugins: ["transform-class-properties"]
+                plugins: ["transform-class-properties", "transform-object-rest-spread"]
               }),
   extensions: ['.jsx'],
   debug: true,

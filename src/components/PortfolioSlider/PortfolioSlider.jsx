@@ -10,11 +10,14 @@ import CaseStudyHero from '../CaseStudyHero/CaseStudyHero';
 import CaseStudyDetails from '../CaseStudyDetails/CaseStudyDetails';
 import DetailsToggle from '../DetailsToggle/DetailsToggle';
 
+const _RTL = "_RightToLeft";
+const _LTR = "_LeftToRight";
+
 class PortfolioSlider extends React.Component {
   constructor() {
     super();
 
-    this.slide_direction = "_RightToLeft";
+    this.slide_direction = _RTL;
 
     this.state = {
       show_details: false
@@ -37,22 +40,22 @@ class PortfolioSlider extends React.Component {
   }
 
   slideLeft(){
-    this.slide_direction = "_LeftToRight";
+    this.slide_direction = _LTR;
     PortfolioActions.decrementCaseStudyActive();
   }
 
   slideRight(){
-    this.slide_direction = "_RightToLeft";
+    this.slide_direction = _RTL;
     PortfolioActions.incrementCaseStudyActive();  
   }
 
   render() {
 
-    let module_hero = <CaseStudyHero key={this.props.case_study_active.title} case_study_data={this.props.case_study_active} />;
-    let module_details = this.state.show_details ? <CaseStudyDetails key={this.props.case_study_active.title} case_study_data={this.props.case_study_active} /> : '';
+    let module_hero = <CaseStudyHero key={this.props.case_study_active.id} {...this.props.case_study_active} />;
+    let module_details = this.state.show_details ? <CaseStudyDetails key={this.props.case_study_active.id} {...this.props.case_study_active} /> : '';
 
     let slide_anim_name;
-    if(this.slide_direction == "_RightToLeft"){
+    if(this.slide_direction == _RTL){
       slide_anim_name = "case-study-hero__slide-rtl";
     } else {
       slide_anim_name = "case-study-hero__slide-ltr";

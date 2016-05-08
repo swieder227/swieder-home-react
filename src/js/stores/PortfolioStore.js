@@ -1,22 +1,11 @@
 import alt from '../alt';
 import PortfolioActions from '../actions/PortfolioActions';
 
+import {case_study_data} from '../../data/case_study_data';
+
 class PortfolioStore {
   constructor() {
-    this.case_studies = [
-      {
-        title: "1 title"
-      },
-      {
-        title: "2 title"
-      },
-      {
-        title: "3 title"
-      },
-      {
-        title: "4 title"
-      }
-    ];
+    this.case_studies = case_study_data;
     this.case_study_active_index = 0;
     this.case_study_active = this.case_studies[this.case_study_active_index];
 
