@@ -3,6 +3,53 @@ html, body {
   font-size: 16px;
   font-family: sans-serif; }
 
+.case-study-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white; }
+
+.case-study-details__slide-enter {
+  transform: translateY(100%); }
+
+.case-study-details__slide-enter-active {
+  transition: transform 0.5s ease-out 0s;
+  transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) 0.6s;
+  transform: translateY(0px); }
+
+.case-study-details__slide-leave {
+  transform: translateY(0px); }
+
+.case-study-details__slide-leave-active {
+  transition: transform 0.5s ease-out 0s;
+  transform: translateY(100%); }
+
+.case-study-details__contain {
+  padding: 4rem 2rem 2rem;
+  max-width: 768px;
+  margin: 0 auto;
+  overflow: auto; }
+
+.detals-toggle__main-btn {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  transition: transform 0.6s ease-out 0s;
+  border: none;
+  color: white;
+  padding: 1rem;
+  background: blue; }
+  .detals-toggle__main-btn.detals-toggle__main-btn--open {
+    transition: transform 0.7s ease-in-out 0s;
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s; }
+
+.detals-toggle__target {
+  position: absolute;
+  top: 3rem;
+  left: 2rem; }
+
 .case-study-hero {
   position: absolute;
   top: 0;
@@ -30,47 +77,11 @@ html, body {
 
 .case-study-hero__text {
   position: absolute;
-  bottom: 4rem;
+  bottom: 6rem;
   left: 2rem; }
-
-.case-study-details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: white; }
-
-.case-study-details__slide-enter {
-  transform: translateY(100%); }
-
-.case-study-details__slide-enter-active {
-  transition: transform 0.5s ease-out 0s;
-  transform: translateY(0px); }
-
-.case-study-details__slide-leave {
-  transform: translateY(0px); }
-
-.case-study-details__slide-leave-active {
-  transition: transform 0.5s ease-out 0s;
-  transform: translateY(100%); }
-
-.case-study-details__contain {
-  padding: 2rem;
-  max-width: 768px;
-  margin: 0 auto;
-  overflow: auto; }
-
-.detals-toggle__main-btn {
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  transition: transform 0.45s ease-in-out 0s; }
-
-.detals-toggle__target {
-  position: absolute;
-  top: 2rem;
-  left: 2rem; }
+  .case-study-hero__text.case-study-hero__text--fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-out 0s; }
 
 .portfolio-slider {
   z-index: 100;

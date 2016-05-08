@@ -51,20 +51,26 @@ class PortfolioSlider extends React.Component {
 
   render() {
 
-    let module_hero = <CaseStudyHero key={this.props.case_study_active.id} {...this.props.case_study_active} />;
+    // Render a module for the current case study based on active index
+    // Pass in detail state for animation purposes
+    let module_hero = <CaseStudyHero key={this.props.case_study_active.id} {...this.props.case_study_active} anim_out_state={this.state.show_details} />;
+    
+    // If show detail state is active,
+    // Render the Details module, else render nothing and we'll animate in/out
     let module_details = this.state.show_details ? <CaseStudyDetails key={this.props.case_study_active.id} {...this.props.case_study_active} /> : '';
 
-    let slide_anim_name;
+    // Name of the CSS animation class to use. Detect left||right
+    let hero_anim_dir;
     if(this.slide_direction == _RTL){
-      slide_anim_name = "case-study-hero__slide-rtl";
+      hero_anim_dir = "case-study-hero__slide-rtl";
     } else {
-      slide_anim_name = "case-study-hero__slide-ltr";
+      hero_anim_dir = "case-study-hero__slide-ltr";
     }
 
     return (
       <div className="portfolio-slider">        
           <div className="portfolio-slider__hero">
-            <ReactCSSTransitionGroup transitionName={slide_anim_name} transitionEnterTimeout={700} transitionLeaveTimeout={700}>
+            <ReactCSSTransitionGroup transitionName={hero_anim_dir} transitionEnterTimeout={700} transitionLeaveTimeout={700}>
               {module_hero}
             </ReactCSSTransitionGroup>
           </div>
@@ -73,7 +79,7 @@ class PortfolioSlider extends React.Component {
             <button onClick={this.slideRight.bind(this)}>Forward</button>
           </div>
           <div className="portfolio-slider__details">
-            <ReactCSSTransitionGroup transitionName="case-study-details__slide" transitionEnterTimeout={700} transitionLeaveTimeout={700}>
+            <ReactCSSTransitionGroup transitionName="case-study-details__slide" transitionEnterTimeout={1500} transitionLeaveTimeout={500}>
               {module_details}
             </ReactCSSTransitionGroup>
           </div>

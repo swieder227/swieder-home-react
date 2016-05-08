@@ -34,6 +34,12 @@
 // Text
 .case-study-hero__text {
   position: absolute;
-  bottom: 4rem;
+  bottom: 6rem;
   left: 2rem;
+
+  
+  &.case-study-hero__text--fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-out 0s;
+  }
 }

@@ -1,16 +1,29 @@
+@import '../../scss/_colors.scss';
+
 .detals-toggle {
 
 }
+
 .detals-toggle__main-btn {
   position: absolute;
   bottom: 2rem;
   left: 2rem;
-  transition: transform 0.45s ease-in-out 0s; 
-  // transition: transform 1s ease-in-out 0s;
+  
+  transition: transform 0.6s ease-out 0s;  
+
+  &.detals-toggle__main-btn--open {
+    transition: transform 0.7s ease-in-out 0s;
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s;
+  }
+
+  border: none;
+  color: white;
+  padding: 1rem;
+  background: $color__primary;
 }
 
 .detals-toggle__target {
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   left: 2rem;
 }

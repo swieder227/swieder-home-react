@@ -36,6 +36,11 @@ export default class CaseStudyDetailToggle extends React.Component {
 
   render() {
 
+    let btn_class = "detals-toggle__main-btn"
+    if(this.props.show_details){
+      btn_class += " detals-toggle__main-btn--open";
+    }
+
     let btn_text = this.props.show_details ? "Down" : "Up";
 
     let btn_translate_y = this.props.show_details ? this.getTranslateOffset() : 0;    
@@ -45,7 +50,7 @@ export default class CaseStudyDetailToggle extends React.Component {
 
     return (
       <div className="detals-toggle">
-        <button className="detals-toggle__main-btn" ref="main_btn" style={main_btn_style} onClick={this.handleClick.bind(this)}>{btn_text}</button>
+        <button className={btn_class} ref="main_btn" style={main_btn_style} onClick={this.handleClick.bind(this)}>{btn_text}</button>
         <div className="detals-toggle__target" ref="target_btn" />
       </div>
     )
