@@ -6,13 +6,17 @@ export default class CaseStudyHero extends React.Component {
   }
 
   static propTypes = {
-    title: React.PropTypes.string.isRequired
+    title: React.PropTypes.string.isRequired,
+    summary: React.PropTypes.string.isRequired
   };
 
   render() {
     return (
       <div className="case-study-hero">
-        {this.props.title}
+        <div className="case-study-hero__text">
+          <h1>{this.props.title}</h1>
+          <h3>{this.props.summary}</h3>
+        </div>
       </div>
     )
   }

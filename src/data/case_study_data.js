@@ -1,7 +1,8 @@
 export const case_study_data = [
   {
     id: "1",
-    title: "1 foobaz",
+    title: "The Awesome Title Here",
+    summary: "Summary is a short sentance describing the project",
     sections: [
       {
         id: "1_1",
@@ -19,17 +20,20 @@ export const case_study_data = [
   },
   {
     id: "2",
-    title: "2 foobaz",
+    title: "The Awesome Title Here",
+    summary: "Summary is a short sentance describing the project",
     sections: []
   },
   {
     id: "3",
-    title: "3 foobaz",
+    title: "The Awesome Title Here",
+    summary: "Summary is a short sentance describing the project",
     sections: []
   },
   {
     id: "4",
-    title: "4 foobaz",
+    title: "The Awesome Title Here",
+    summary: "Summary is a short sentance describing the project",
     sections: []
   }
 ];

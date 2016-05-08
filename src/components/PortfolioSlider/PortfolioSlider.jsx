@@ -64,7 +64,7 @@ class PortfolioSlider extends React.Component {
     return (
       <div className="portfolio-slider">        
           <div className="portfolio-slider__hero">
-            <ReactCSSTransitionGroup transitionName={slide_anim_name} transitionEnterTimeout={600} transitionLeaveTimeout={600}>
+            <ReactCSSTransitionGroup transitionName={slide_anim_name} transitionEnterTimeout={700} transitionLeaveTimeout={700}>
               {module_hero}
             </ReactCSSTransitionGroup>
           </div>
@@ -73,7 +73,7 @@ class PortfolioSlider extends React.Component {
             <button onClick={this.slideRight.bind(this)}>Forward</button>
           </div>
           <div className="portfolio-slider__details">
-            <ReactCSSTransitionGroup transitionName="case-study-details__slide" transitionEnterTimeout={600} transitionLeaveTimeout={600}>
+            <ReactCSSTransitionGroup transitionName="case-study-details__slide" transitionEnterTimeout={700} transitionLeaveTimeout={700}>
               {module_details}
             </ReactCSSTransitionGroup>
           </div>

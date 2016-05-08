@@ -4,11 +4,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-
-  border: 1px solid blue;
   background: white;
 }
 
+// Animation up/down from ReactCSSTransitionGroup
 .case-study-details__slide-enter {
   transform: translateY(100%);
 }
@@ -23,4 +22,13 @@
 .case-study-details__slide-leave-active {
   transition: transform 0.5s ease-out 0s; 
   transform: translateY(100%);
+}
+
+.case-study-details__contain {
+  padding: 2rem;
+  max-width: 768px;
+  margin: 0 auto;
+
+  overflow: auto;
+  // TODO: lookup and add inertia scrolling property
 }

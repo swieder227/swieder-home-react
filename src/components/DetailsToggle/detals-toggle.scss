@@ -5,7 +5,8 @@
   position: absolute;
   bottom: 2rem;
   left: 2rem;
-  transition: transform 1s ease-in-out 0s;
+  transition: transform 0.45s ease-in-out 0s; 
+  // transition: transform 1s ease-in-out 0s;
 }
 
 .detals-toggle__target {

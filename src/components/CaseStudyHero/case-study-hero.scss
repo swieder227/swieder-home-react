@@ -4,20 +4,22 @@
   left: 0;
   right: 0;
   bottom: 0;
-
-  border: 1px solid red;
-  background: white;
+  
+  border: 1px solid #555;
+  background: #ccc;
 }
 
+// Animation in/out from ReactCSSTransitionGroup
 .case-study-hero__slide-rtl-enter,
 .case-study-hero__slide-ltr-enter {
   z-index: 100;
 }
+
+// Js applies direction left||right
 .case-study-hero__slide-rtl-enter{
   transform: translate(100%);
 }
 .case-study-hero__slide-ltr-enter {
-  z-index: 100;
   transform: translate(-100%);
 }
 
@@ -27,4 +29,11 @@
   transition: transform 0.5s ease-out 0s;
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
   transform: translate(0px);
+}
+
+// Text
+.case-study-hero__text {
+  position: absolute;
+  bottom: 4rem;
+  left: 2rem;
 }

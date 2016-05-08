@@ -22,9 +22,11 @@ export default class CaseStudyDetails extends React.Component {
 
     return (
       <div className="case-study-details">
-        <h1>Detail Page {this.props.title}</h1>
-        <hr/>
-        {render_sections}
+        <div className="case-study-details__contain">
+          <h1>Detail Page {this.props.title}</h1>
+          <hr/>
+          {render_sections}
+        </div>
       </div>
     )
   }
