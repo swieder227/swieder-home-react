@@ -8,11 +8,16 @@
   overflow: hidden;
 }
 
-.portfolio-slider__arrows {
+.portfolio-slider__arrows-contain {
   z-index: 200;
   position: absolute;
   bottom: 2rem;
   right: 2rem;
+}
+
+.portfolio-slider__arrow {
+  display: inline-block;
+  margin: 0 0.5rem;
 }
 
 .portfolio-slider__details {

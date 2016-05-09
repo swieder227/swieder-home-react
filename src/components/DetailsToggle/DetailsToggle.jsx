@@ -2,6 +2,8 @@ import React from 'react';
 
 import {getPositionAtCenter} from '../../js/utils.js';
 
+import BtnChipArticleDown from '../BtnChip/BtnChipArticleDown';
+
 export default class CaseStudyDetailToggle extends React.Component {
   constructor() {
     super();
@@ -54,11 +56,12 @@ export default class CaseStudyDetailToggle extends React.Component {
     return (
       <div className="details-toggle">
         <div className={btn_class} ref="main_btn" style={main_btn_style} onClick={this.handleClick.bind(this)}>
-          <div className="detail-toggle__text-contain">
+          <BtnChipArticleDown add_class="btn-chip--article-down btn-chip--detail-toggle" view_box="0 0 13 22" width="13px" height="22px"/>
+          {/*<div className="detail-toggle__text-contain">
             <div className="detail-toggle__text">
               {btn_text}
             </div>
-          </div>
+          </div>*/}
         </div>
         <div className="details-toggle__target" ref="target_btn" />
       </div>
