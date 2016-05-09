@@ -9,6 +9,7 @@ import PortfolioActions from '../../js/actions/PortfolioActions';
 import CaseStudyHero from '../CaseStudyHero/CaseStudyHero';
 import CaseStudyDetails from '../CaseStudyDetails/CaseStudyDetails';
 import DetailsToggle from '../DetailsToggle/DetailsToggle';
+import BtnChip from '../BtnChip/BtnChip';
 
 const _RTL = "_RightToLeft";
 const _LTR = "_LeftToRight";
@@ -75,8 +76,8 @@ class PortfolioSlider extends React.Component {
             </ReactCSSTransitionGroup>
           </div>
           <div className="portfolio-slider__arrows">
-            <button onClick={this.slideLeft.bind(this)}>Back</button>
-            <button onClick={this.slideRight.bind(this)}>Forward</button>
+            <BtnChip clickCallback={this.slideLeft.bind(this)} />
+            <BtnChip clickCallback={this.slideRight.bind(this)} />
           </div>
           <div className="portfolio-slider__details">
             <ReactCSSTransitionGroup transitionName="case-study-details__slide" transitionEnterTimeout={1500} transitionLeaveTimeout={500}>
