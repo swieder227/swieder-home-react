@@ -1,5 +1,6 @@
 import React from 'react';
-//import GlobalNav from './components/GlobalNav/GlobalNav';
+
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 // Main React UI Element
 export default class App extends React.Component {
@@ -11,7 +12,15 @@ export default class App extends React.Component {
         {/*<GlobalNav history={this.props.history} />*/}
         
         {/* Dynamic content decided by the Router */}
-        {this.props.children}
+        <div id="router-content">
+        <ReactCSSTransitionGroup transitionName="react-css--slide-up" transitionEnterTimeout={1600} transitionLeaveTimeout={1600}>
+          {
+            React.cloneElement(this.props.children, {
+              key: this.props.location.pathname
+            })
+          }
+        </ReactCSSTransitionGroup>
+        </div>
 
       </div>
     )

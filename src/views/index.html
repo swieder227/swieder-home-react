@@ -23,13 +23,21 @@
                 NODE_ENV: "{{NODE_ENV}}",
             }
         </script>
+        <!-- js bundle -->
+        {% if NODE_ENV == "development" %}
+        <script src="/dev/build.js"></script>
+        {% else %}
+        <script src="/dist/build.min.js"></script>
+        {% endif %}
         <!-- async fonts  -->
         <script>
             WebFontConfig = {
                 google: {
                     families: ['Oswald:400,300,700', 'Open Sans:400,300,700']
                 },
-                active: function(){console.log("font loaded!")}
+                classes: false,
+                loading: window.splash.queueAdd,
+                active: window.splash.queueRemove
             };
             (function(d) {
                 var wf = d.createElement('script'), s = d.scripts[0];
@@ -38,14 +46,5 @@
                 s.parentNode.insertBefore(wf, s);
             })(document);
         </script>
-        <!-- js bundle -->
-        {% if NODE_ENV == "development" %}
-        <script src="/dev/build.js"></script>
-        {% else %}
-        <script src="/dist/build.min.js"></script>
-        {% endif %}
-
-       
-        
     </body>
 </html>

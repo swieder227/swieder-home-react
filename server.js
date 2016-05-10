@@ -35,25 +35,17 @@ app.use(express.static(path.join(__dirname,'public')));
 app.use(favicon(__dirname + '/public/assets/favicon.ico'));
 app.use(require('connect-livereload')());
 
-/*
-  Example fire when url is /pure
-  Appennds data to the locals var, which is bootstrapped to the alt instance and passed to the stores on client.js
-*/
-// app.get('/pure', function(req, res, next){
-  
-//   res.locals.data = {
-//     ExampleStore: {
-//       examples : [
-//         {
-//           "id" : 9999,
-//           "name" : "From the Server :)"
-//         }
-//       ]
-//     }
-//   }
-//   next();
 
-// });
+/*
+** Always redirect to splash page
+*/
+app.get('*', function(req, res, next){
+  if(req.url === "/"){
+    next();
+  } else {
+    res.redirect('/');    
+  }
+});
 
 
 

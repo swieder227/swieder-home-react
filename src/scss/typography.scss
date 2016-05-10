@@ -1,7 +1,14 @@
+@import './_breakpoints.scss';
+
 html, body {
   font-family: 'Open Sans', 'New Times Roman', serif;
   font-size: 16px;
+
+  @media screen and (max-width: $breakpoint__mobile--max) {
+    font-size: 14px;
+  }
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald', 'Arial', sans-serif;
