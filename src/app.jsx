@@ -12,7 +12,7 @@ export default class App extends React.Component {
         {/*<GlobalNav history={this.props.history} />*/}
         
         {/* Dynamic content decided by the Router */}
-        <div id="router-content">
+        <div id="site__router">
         <ReactCSSTransitionGroup transitionName="react-css--slide-up" transitionEnterTimeout={1600} transitionLeaveTimeout={1600}>
           {
             React.cloneElement(this.props.children, {

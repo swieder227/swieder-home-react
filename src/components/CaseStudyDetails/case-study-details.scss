@@ -5,6 +5,8 @@
   right: 0;
   bottom: 0;
   background: white;
+  overflow: auto;
+  // TODO: lookup and add inertia scrolling property
 }
 
 // Animation up/down from ReactCSSTransitionGroup
@@ -28,8 +30,34 @@
 .case-study-details__contain {
   padding: 4rem 2rem 2rem;
   max-width: 768px;
-  margin: 0 auto;
+  margin: 0 auto;  
+}
 
-  overflow: auto;
-  // TODO: lookup and add inertia scrolling property
+// Text
+.case-study-details__title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+.case-study-details__info-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.case-study-details__info-type {
+  margin-right: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.case-study-details__info-value,
+.case-study-details__info-type {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.site__divider--case-study-info {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

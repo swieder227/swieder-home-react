@@ -6,9 +6,9 @@ export default class CaseStudyHero extends React.Component {
   }
 
   static propTypes = {
-    title: React.PropTypes.string.isRequired,
-    summary: React.PropTypes.string.isRequired,
-    anim_out_state: React.PropTypes.bool.isRequired
+    anim_out_state: React.PropTypes.bool.isRequired,
+    heading: React.PropTypes.string.isRequired,
+    subheading: React.PropTypes.string.isRequired
   };
 
   render() {
@@ -21,8 +21,8 @@ export default class CaseStudyHero extends React.Component {
     return (
       <div className="case-study-hero">
         <div className={case_study_text_class}>
-          <h1>{this.props.title}</h1>
-          <h3>{this.props.summary}</h3>
+          <h1 className="case-study-hero__heading">{this.props.heading}</h1>
+          <h3 className="case-study-hero__subheading">{this.props.subheading}</h3>
         </div>
       </div>
     )

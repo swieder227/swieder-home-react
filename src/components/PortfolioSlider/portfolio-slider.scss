@@ -29,7 +29,7 @@
   bottom: 0;
 
   pointer-events: none;
-  & > div {
+  & > * {
     pointer-events: auto;
   }
 }
@@ -43,7 +43,7 @@
   bottom: 0;
 
   pointer-events: none;
-  & > div {
+  & > * {
     pointer-events: auto;
   }
 }

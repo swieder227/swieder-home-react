@@ -1,39 +1,55 @@
 export const case_study_data = [
   {
-    id: "1",
-    title: "The Awesome Title Here",
-    summary: "Summary is a short sentance describing the project",
+    id: "0",
+    heading: "23 Stories",
+    subheading: "A high profile rebranding of Conde Nast Media Group to 23 Stories required an equally polished and professional website.",
+    title: "23stories.com",  
+    date: "Sep 2015",
+    client: "23 Stories x Conde Nast",
+    role: "Lead Web Developer",
     sections: [
       {
-        id: "1_1",
+        id: "0_0",
         template: "paragraph",
-        heading: "This is a heading",
-        body: "Here is the body copy it's a big longer dontcha know. The quick brown fox jumps over the lazy dog. Lorem ipsum bada bip sum."
+        heading: "Creative Collaboration",
+        body: "I was honored to hear that our Creative Directors had specifically asked for my assignment to this project -- especially knowing the entire company and executives had eyes on it! I enjoy collaborating directly with creatives and designers through ideation and revisions. And they value my input for UX and front-end executions. I bring a positive and extrovert attitude that, when combined with expertise, improves concepts and solutions."
       },
       {
-        id: "1_2",
+        id: "0_1",
         template: "paragraph",
-        heading: "A second heading",
-        body: "Here is MOAR body copy... Lorem ipsum bada bip sum."
+        heading: "Clean, Modular, Performant Web Development",
+        body: "The top line requirements were to have an easy-to-use CMS with strong SEO, so a custom Wordpress theme made sense for us. I also set technical expectations. One, since the site is evergreen, it should be easily extensible by future developers. And two, that since it's the face of our company, front-end performance should be a priority."
+      },
+      {
+        id: "0_2",
+        template: "paragraph",
+        heading: "Software Architecture",
+        body: "Maintainability is an underrated, oft overlooked, part of software development. Not here. When I'm coding web applications, I enjoy building software that is well-architected, organized, and documented. The end result is a clear directory structure, modular and testable components, and smart code with comments toboot! I take pride in what I program -- but I always support constructive peer-reviews."
+      },
+      {
+        id: "0_3",
+        template: "paragraph",
+        heading: "3, 2, 1... Launch",
+        body: "After side-by-side design revisions, code reviews, CMS content herding, and a *nerve-wracking* presentation on the 50th floor of One World Trade in front of Conde Nast C-level executives, it was time to launch 23stories.com."
       }
     ]
   },
   {
+    id: "1",
+    heading: "The Awesome Title Here",
+    subheading: "Summary is a short sentance describing the project",
+    sections: []
+  },
+  {
     id: "2",
-    title: "The Awesome Title Here",
-    summary: "Summary is a short sentance describing the project",
+    heading: "The Awesome Title Here",
+    subheading: "Summary is a short sentance describing the project",
     sections: []
   },
   {
     id: "3",
-    title: "The Awesome Title Here",
-    summary: "Summary is a short sentance describing the project",
-    sections: []
-  },
-  {
-    id: "4",
-    title: "The Awesome Title Here",
-    summary: "Summary is a short sentance describing the project",
+    heading: "The Awesome Title Here",
+    subheading: "Summary is a short sentance describing the project",
     sections: []
   }
 ];
