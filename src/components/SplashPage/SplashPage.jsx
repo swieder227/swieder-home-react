@@ -43,18 +43,24 @@ export default class SplashPage extends React.Component {
       this.checkCompletion();
     }, this.min_time);
 
-    
+    this.maxTimeTimeout = window.setTimeout(() => {
+      this.navigateOffSplash();
+    }, this.max_time);
 
     window.splash = new Object;
     window.splash.queueAdd = this.queueAdd;
     window.splash.queueRemove = this.queueRemove;
   }
 
+  componentWillUnmount() {
+    window.clearTimeout(this.minTimeTimeout);
+    window.clearTimeout(this.maxTimeTimeout);
+  }
+
   render() {
     return (
       <div className="splash-page">
         <Introduction />
-        {/*<div className="splash-page__img" />*/}
       </div>
     )
   }

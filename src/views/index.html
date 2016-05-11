@@ -18,25 +18,21 @@
         <div id="app">{{ html|safe }}</div>
         
         <!-- env vars -->
-        <script>
-            window._env = {
-                NODE_ENV: "{{NODE_ENV}}",
-            }
-        </script>
+        <script> window._env = { NODE_ENV: "{{NODE_ENV}}" } </script>
+
         <!-- js bundle -->
         {% if NODE_ENV == "development" %}
         <script src="/dev/build.js"></script>
         {% else %}
         <script src="/dist/build.min.js"></script>
         {% endif %}
+        
         <!-- async fonts  -->
         <script>
+            window.splash.queueAdd();
             WebFontConfig = {
-                google: {
-                    families: ['Oswald:400,300,700', 'Open Sans:400,300,700']
-                },
+                google: { families: ['Oswald:400,300,700', 'Open Sans:400,300,700'] },
                 classes: false,
-                loading: window.splash.queueAdd,
                 active: window.splash.queueRemove
             };
             (function(d) {
