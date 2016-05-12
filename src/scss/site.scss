@@ -22,3 +22,24 @@ html, body {
   height: 0.25rem;
   background-color: $color__primary;
 }
+
+.site__button {
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+  
+  background-color: $color__primary;
+  transition: background 0.3s ease-out 0s;
+
+  &:hover {
+    background-color: darken($color__primary, 10%);
+  }
+}

@@ -2,11 +2,14 @@ export const case_study_data = [
   {
     id: "0",
     heading: "23 Stories",
-    subheading: "A high profile rebranding of Conde Nast Media Group to 23 Stories required an equally polished and professional website.",
-    title: "23stories.com",  
+    subheading: "Conde Nast Media Group becomes 23 Stories",
+    title: "23stories.com",
+    summary: "A high profile rebranding that required an equally high quality website. I was the developer for the job.",
     date: "Sep 2015",
     client: "23 Stories x Conde Nast",
     role: "Lead Web Developer",
+    hero_img: "./assets/case_23c.jpg",
+    launch_url: "http://23stories.com/",
     sections: [
       {
         id: "0_0",

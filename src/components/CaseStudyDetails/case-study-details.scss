@@ -38,23 +38,25 @@
   font-size: 4rem;
   margin-bottom: 1.5rem;
 }
+
+.case-study-details__summary {
+  font-size: 1.5rem;
+}
+
 .case-study-details__info-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
+  margin-bottom: 0.7rem;
 }
 
 .case-study-details__info-type {
   margin-right: 1rem;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .case-study-details__info-value,
 .case-study-details__info-type {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
+  margin: 0;
 }
 
 .site__divider--case-study-info {
