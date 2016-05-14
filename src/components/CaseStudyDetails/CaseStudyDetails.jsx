@@ -9,7 +9,7 @@ export default class CaseStudyDetails extends React.Component {
 
   static propTypes = {
     sections: React.PropTypes.array.isRequired,
-    title: React.PropTypes.string.isRequired,
+    heading: React.PropTypes.string.isRequired,
     summary: React.PropTypes.string.isRequired,
     date: React.PropTypes.string.isRequired,
     client: React.PropTypes.string.isRequired,
@@ -33,12 +33,12 @@ export default class CaseStudyDetails extends React.Component {
       
     });
 
-    let launch_btn = this.props.launch_url ? <a className="site__button" href={this.props.launch_url} target="_blank">LAUNCH</a> : "";
+    let launch_btn = this.props.launch_url ? <a className="site__button" href={this.props.launch_url} target="_blank">LAUNCH</a> : <div className="site__button site__button--disabled">PUBLIC SITE UNAVAILABLE</div>;
 
     return (
       <div className="case-study-details">
         <div className="case-study-details__contain">
-          <h1 className="case-study-details__title">{this.props.title}</h1>
+          <h1 className="case-study-details__title">{this.props.heading}</h1>
           <p className="case-study-details__summary">{this.props.summary}</p>
           <div className="case-study-details__info">
             <div className="case-study-details__info-row">

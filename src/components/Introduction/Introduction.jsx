@@ -19,7 +19,6 @@ export default class Introduction extends React.Component {
   }
 
   componentDidMount() {
-    
     this.name_offset_height = this.refs.subheading.offsetHeight;
 
     this.incrementNames = window.setInterval(()=> {

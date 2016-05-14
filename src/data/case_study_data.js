@@ -3,12 +3,11 @@ export const case_study_data = [
     id: "0",
     heading: "23 Stories",
     subheading: "Conde Nast Media Group becomes 23 Stories",
-    title: "23stories.com",
     summary: "A high profile rebranding that required an equally high quality website. I was the developer for the job.",
     date: "Sep 2015",
     client: "23 Stories x Conde Nast",
     role: "Lead Web Developer",
-    hero_img: "./assets/case_23c.jpg",
+    hero_img: "./assets/case_23_1.jpg",
     launch_url: "http://23stories.com/",
     sections: [
       {
@@ -39,20 +38,38 @@ export const case_study_data = [
   },
   {
     id: "1",
-    heading: "The Awesome Title Here",
-    subheading: "Summary is a short sentance describing the project",
+    heading: "TargetStyle",
+    subheading: "Recreating famous Vogue images in Target style.",
+    summary: "An ad campaign that extends the Vogue September Issue into a digital interactive experience.",
+    date: "Oct 2015",
+    client: "TargetStyle x Vogue",
+    role: "Lead Web Developer",
+    hero_img: "./assets/case_targetstyle_1.jpg",
+    launch_url: "http://origin.ads.thestudio.condenast.com/staging/targetstylemarketing/target_mobile/index.html",
     sections: []
   },
   {
     id: "2",
-    heading: "The Awesome Title Here",
-    subheading: "Summary is a short sentance describing the project",
+    heading: "GLC Uncharted",
+    subheading: "Following photographers adventures in the Mercedes-Bend GLC.",
+    summary: "A digital marketing campaign featuring HD imagery and hyperlapse video.",
+    date: "Sep 2015",
+    client: "23 Stories x Conde Nast",
+    role: "Lead Web Developer",
+    hero_img: "./assets/case_glc_1.jpg",
+    launch_url: "http://www.glcuncharted.com/",
     sections: []
   },
   {
     id: "3",
-    heading: "The Awesome Title Here",
-    subheading: "Summary is a short sentance describing the project",
+    heading: "Coke-Cola Heatmaps",
+    subheading: "An interactive map tool to improve sales projections.",
+    summary: "A responsive ReactJS single-page-application that integrated Coke's bottling database.",
+    date: "Sep 2015",
+    client: "23 Stories x Conde Nast",
+    role: "Lead Web Developer",
+    hero_img: "./assets/case_coke_1.jpg",
+    launch_url: "",
     sections: []
   }
 ];

@@ -39,7 +39,12 @@ html, body {
   background-color: $color__primary;
   transition: background 0.3s ease-out 0s;
 
-  &:hover {
+  &:not(.site__button--disabled):hover {
     background-color: darken($color__primary, 10%);
+  }
+
+  &.site__button--disabled {
+    opacity: 0.5;
+    cursor: no-drop;
   }
 }
