@@ -28,7 +28,6 @@ class SplashPage extends React.Component {
   }
 
   navigateOffSplash = () => {
-    return false;
     console.log("navigateOffSplash");
     this.props.history.push("/portfolio");
   }
