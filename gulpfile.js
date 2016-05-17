@@ -14,6 +14,7 @@ var gutil = require('gulp-util');
 var notify = require('gulp-notify');
 var nodemon = require('nodemon');
 var livereload = require('gulp-livereload');
+var inlinesource = require('gulp-inline-source');
 
 var PATH = {
   SCSS_SRC : ["src/scss/*.scss", "src/components/**/*.scss"],
@@ -21,6 +22,7 @@ var PATH = {
   SCSS_OUT_PROD : "public/dist",
   CSS_NAME_DEV : 'styles.css',
   CSS_NAME_PROD : 'styles.min.css',
+  CSS_CRITICAL_IN : 'src/scss/_includes/gulp_critical.scss',
   JS_OUT_DEV : "public/dev",
   JS_OUT_PROD : "public/dist",
   JS_NAME_DEV : 'build.js',
@@ -66,6 +68,18 @@ gulp.task('scssDev', function(){
     .pipe(concat(PATH.CSS_NAME_DEV))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(PATH.SCSS_OUT_DEV))
+});
+
+gulp.task('inlineCriticalCSS', function(){
+  // gulp.src(PATH.CSS_CRITICAL_IN)
+  //   .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+  //   .pipe(concat('critical.css'))
+  //   .pipe(gulp.dest(PATH.SCSS_OUT_DEV))
+
+  gulp.src('src/views/index.dev.html')
+    .pipe(inlinesource())
+    .pipe(concat('index.html'))
+    .pipe(gulp.dest('src/views/'))
 });
 
 function handleErrors() {
@@ -118,6 +132,10 @@ gulp.task("watchDev", function(){
   // When scss changes, re-compile
   watch(PATH.SCSS_SRC, function(event){
     gulp.start('scssDev');
+  });
+
+  watch(PATH.CSS_CRITICAL_IN, function(){
+    gulp.start('inlineCriticalCSS')
   });
   
 });
