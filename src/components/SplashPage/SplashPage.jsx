@@ -13,9 +13,9 @@ class SplashPage extends React.Component {
 
     this.outstanding_queue = 0;
 
-    this.min_time = 4000;
+    this.min_time = 3000;
     this.min_time_fulfilled = false;
-    this.max_time = 6000;
+    this.max_time = 3000;
   }
 
   static getStores(props) {
@@ -28,6 +28,7 @@ class SplashPage extends React.Component {
   }
 
   navigateOffSplash = () => {
+    return false;
     console.log("navigateOffSplash");
     this.props.history.push("/portfolio");
   }
@@ -38,7 +39,7 @@ class SplashPage extends React.Component {
     }
   }
 
-  preloadFonts(){
+  preloadFonts() {
     this.queueAdd();
 
     // asynchronsly loads Google Fonts. `active` callback when complete
@@ -53,7 +54,7 @@ class SplashPage extends React.Component {
     s.parentNode.insertBefore(wf, s);
   }
 
-  preloadImages(){
+  preloadImages() {
     // Preload 
     const img_array = this.props.preload_img_array;
 
@@ -69,12 +70,10 @@ class SplashPage extends React.Component {
 
   queueAdd = () => {
     this.outstanding_queue += 1;
-    console.log("add", this.outstanding_queue);
   }
 
   queueRemove = () => {
     this.outstanding_queue -= 1;
-    console.log("remove", this.outstanding_queue); 
     this.checkCompletion();
   }
 
