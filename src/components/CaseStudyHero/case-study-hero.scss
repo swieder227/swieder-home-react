@@ -1,3 +1,5 @@
+@import "../../scss/_breakpoints.scss";
+
 .case-study-hero {
   position: absolute;
   top: 0;
@@ -76,11 +78,19 @@
   font-size: 3.5rem;
   line-height: 1;
   margin: 0.5rem 0;  
+
+  @media screen and (max-width: $breakpoint__case-hero-wordbreak) {
+    font-size: 2.5rem;
+  }
 }
 
 .case-study-hero__subheading {
   font-size: 1.2rem;
   line-height: 1.4;
   margin: 0;
-  max-width: 560px;
+  max-width: 640px;
+
+  @media screen and (max-width: $breakpoint__case-hero-wordbreak) {
+    font-size: 1.1rem;
+  }
 }

@@ -42,15 +42,15 @@ export default class CaseStudyDetails extends React.Component {
           <p className="case-study-details__summary">{this.props.summary}</p>
           <div className="case-study-details__info">
             <div className="case-study-details__info-row">
-              <p className="case-study-details__info-type">Client</p>
+              <h5 className="case-study-details__info-type">Client</h5>
               <p className="case-study-details__info-value">{this.props.client}</p>
             </div>
             <div className="case-study-details__info-row">
-              <p className="case-study-details__info-type">Role</p>
+              <h5 className="case-study-details__info-type">Role</h5>
               <p className="case-study-details__info-value">{this.props.role}</p>
             </div>
             <div className="case-study-details__info-row">
-              <p className="case-study-details__info-type">Date</p>
+              <h5 className="case-study-details__info-type">Date</h5>
               <p className="case-study-details__info-value">{this.props.date}</p>
             </div>
           </div>
