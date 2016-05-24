@@ -84,6 +84,7 @@ $introduction__font-size: 4rem;
 $name_height: 4rem;
 $names_max: 12;
 $animation_duration: 1.1s;
+$initial_delay: 0.33s;
 @keyframes name_translate {
   @for $i from 0 to $names_max {
     #{100 / $names_max * $i}% {
@@ -101,8 +102,8 @@ $animation_duration: 1.1s;
   width: 100%;
   bottom: -1 * $introduction__font-size;
 
-  animation: name_translate ($names_max * $animation_duration) 0.5s both ease-in-out 1;
-  animation: name_translate ($names_max * $animation_duration) 0.5s both cubic-bezier(0.4, 0, 0.2, 1) 1;
+  animation: name_translate ($names_max * $animation_duration) (0.5s + $initial_delay) both ease-in-out 1;
+  animation: name_translate ($names_max * $animation_duration) (0.5s + $initial_delay) both cubic-bezier(0.4, 0, 0.2, 1) 1;
 
 }
 
@@ -125,13 +126,13 @@ $animation_duration: 1.1s;
   
   height: $name_height;
   line-height: $name_height;
-  animation: fadeNameInOut 1s both ease-out 1;
+  animation: fadeNameInOut 1s $initial_delay both ease-out 1;
 
   // fade in and out with a cascading delay. 
   // corresponds with introduction__name-translate
   @for $i from 1 through ($names_max + 1) {
     &:nth-child( #{$names_max - $i} ){
-      animation-delay: $i * $animation_duration;
+      animation-delay: $i * $animation_duration + $initial_delay;
     }
   }
 
