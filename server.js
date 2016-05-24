@@ -26,15 +26,18 @@ var ip = '0.0.0.0';
 var port = 8080;
 var app = express();
 
-app.use(logger('dev'))
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname,'src/views'));
 app.set('env', process.env.NODE_ENV || "development");
 app.use(express.static(path.join(__dirname,'public')));
 app.use(favicon(__dirname + '/public/assets/favicon.ico'));
-app.use(require('connect-livereload')());
 
+// Optional Dev configs
+if(app.get('env') == "development"){
+  app.use(logger('dev'));
+  app.use(require('connect-livereload')());  
+}
 
 /*
 ** Always redirect to splash page
