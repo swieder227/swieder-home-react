@@ -153,6 +153,7 @@ gulp.task('buildProd', function(){
     .pipe(gulp.dest(PATH.SCSS_OUT_PROD))
 
   // js: bundle, compile, concat
+  process.env.NODE_ENV = "production";
   browserify({
     entries: ["./client.js"],
     transform: babelify.configure(
