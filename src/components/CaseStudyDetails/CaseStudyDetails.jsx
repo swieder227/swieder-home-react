@@ -1,6 +1,7 @@
 import React from 'react';
 
 import TextParagraph from '../TextParagraph/TextParagraph';
+import SingleImage from '../SingleImage/SingleImage';
 
 export default class CaseStudyDetails extends React.Component {
   constructor() {
@@ -27,6 +28,9 @@ export default class CaseStudyDetails extends React.Component {
         case "paragraph":
           let {heading, body, ...other} = section_data;
           return <TextParagraph key={section_data.id} heading={heading} body={body} />
+        case "image":
+          let {url, bg_size} = section_data;
+          return <SingleImage key={section_data.id} url={url} bg_size={bg_size} />
         default:
           console.error("unknown section template");
       }

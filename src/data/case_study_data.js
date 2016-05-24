@@ -7,32 +7,44 @@ export const case_study_data = [
     date: "Sep 2015",
     client: "23 Stories x Conde Nast",
     role: "Lead Web Developer",
-    hero_img: "./assets/case_23_1.jpg",
+    hero_img: "./assets/case_23_home.jpg",
     launch_url: "http://23stories.com/",
     sections: [
       {
         id: "0_0",
         template: "paragraph",
         heading: "Creative Collaboration",
-        body: "I was honored to hear that our Creative Directors had specifically asked for my assignment to this project -- especially knowing the entire company and executives had eyes on it! I enjoy collaborating directly with creatives and designers through ideation and revisions. And they value my input for UX and front-end executions. I bring a positive and extrovert attitude that, when combined with expertise, improves concepts and solutions."
+        body: "I was honored to hear that our Creative Directors had specifically asked for my assignment to this project -- especially knowing the entire company had eyes on it!\nI enjoy working with creatives of all varities, and I've been told that they value my input into UX and front-end web development. It's for that reason, and for my positive attitude, that I believe I was able to collaborate on such an important project."
+      },
+      {
+        id: "0_4",
+        template: "image",
+        url: "./assets/case_23_ms.jpg",
+        bg_size: "contain"
       },
       {
         id: "0_1",
         template: "paragraph",
         heading: "Clean, Modular, Performant Web Development",
-        body: "The top line requirements were to have an easy-to-use CMS with strong SEO, so a custom Wordpress theme made sense for us. I also set technical expectations. One, since the site is evergreen, it should be easily extensible by future developers. And two, that since it's the face of our company, front-end performance should be a priority."
+        body: "The top line requirements were to have an easy-to-use CMS with strong SEO. After seeing the information architecture and page layout, we decided on a custom Wordpress theme suited our needs.\nI also took the liberty to set technical expectations. One, since the site is evergreen, it should be easily extensible by future developers. And two, that since it's the face of our company, front-end performance should be a priority.\nThe end result is an architected, organizned, modular, testable -- and even commented -- code base. \"View source\", I'm not scared. Always have pride in your code."
       },
       {
-        id: "0_2",
-        template: "paragraph",
-        heading: "Software Architecture",
-        body: "Maintainability is an underrated, oft overlooked, part of software development. Not here. When I'm coding web applications, I enjoy building software that is well-architected, organized, and documented. The end result is a clear directory structure, modular and testable components, and smart code with comments toboot! I take pride in what I program -- but I always support constructive peer-reviews."
+        id: "0_5",
+        template: "image",
+        url: "./assets/case_23_cms.jpg",
+        bg_size: "contain"
       },
       {
         id: "0_3",
         template: "paragraph",
-        heading: "3, 2, 1... Launch",
-        body: "After side-by-side design revisions, code reviews, CMS content herding, and a *nerve-wracking* presentation on the 50th floor of One World Trade in front of Conde Nast C-level executives, it was time to launch 23stories.com."
+        heading: "#ShipIt",
+        body: "After revisions, code reviews, content herding, and a nerve-wracking presentation on the 50th floor of One World Trade in front of C-level executives, it was time to launch 23stories.com.\nThe site is considered a success and the CMS content is still easily updated to this day without any tech intervention.\nTo top it off, I was awarded the vaunted Get Shit Done Award™ at the company-wide all-staff meeting. Cheers!"
+      },
+      {
+        id: "0_6",
+        template: "image",
+        url: "./assets/case_23_gsd.jpg",
+        bg_size: "cover"
       }
     ]
   },

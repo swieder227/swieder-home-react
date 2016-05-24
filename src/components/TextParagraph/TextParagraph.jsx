@@ -11,12 +11,15 @@ export default class TextParagraph extends React.Component {
   };
 
   render() {
+
+    let body_parse = this.props.body.split("\n").map((text)=>{
+      return <p key={text.substr(0,10)}>{text}</p>
+    });
+
     return (
       <div>
         <h2>{this.props.heading}</h2>
-        <p>
-          {this.props.body}
-        </p>
+        {body_parse}
       </div>
     )
   }
