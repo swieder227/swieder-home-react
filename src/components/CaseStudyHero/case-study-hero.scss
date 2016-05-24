@@ -66,11 +66,14 @@
   left: 2rem;
   color: #fff;
   padding-right: 2rem;
-
   
   &.case-study-hero__text--fade-out {
     opacity: 0;
     transition: opacity 0.3s ease-out 0s;
+  }
+
+  @media screen and (max-width: $breakpoint__mobile--max) {
+    left: 0.75rem;
   }
 }
 

@@ -1,3 +1,5 @@
+@import "../../scss/_includes/_breakpoints.scss";
+
 .portfolio-slider {
   z-index: 100;
   position: absolute;
@@ -13,6 +15,11 @@
   position: absolute;
   bottom: 2rem;
   right: 2rem;
+  height: 45px;
+
+  @media screen and (max-width: $breakpoint__mobile--max) {
+    right: 0.75rem;
+  }
 }
 
 .portfolio-slider__arrow {

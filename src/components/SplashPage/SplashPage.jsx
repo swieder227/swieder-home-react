@@ -3,7 +3,7 @@ import React from 'react';
 import connectToStores from 'alt-utils/lib/connectToStores';
 import PortfolioStore from '../../js/stores/PortfolioStore';
 
-import {detectIsNode} from '../../js/utils.js';
+import {detectIsNode, NODE_ENV} from '../../js/utils.js';
 
 import Introduction from '../Introduction/Introduction';
 
@@ -13,9 +13,9 @@ class SplashPage extends React.Component {
 
     this.outstanding_queue = 0;
 
-    this.min_time = 500;
+    this.min_time = NODE_ENV == "development" ? 250 : 2000;
     this.min_time_fulfilled = false;
-    this.max_time = 3000;
+    this.max_time = 4000;
   }
 
   static getStores(props) {
@@ -28,7 +28,6 @@ class SplashPage extends React.Component {
   }
 
   navigateOffSplash = () => {
-    console.log("navigateOffSplash");
     this.props.history.push("/portfolio");
   }
 

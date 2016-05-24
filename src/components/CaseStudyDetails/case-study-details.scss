@@ -1,3 +1,5 @@
+@import "./../../scss/_includes/_breakpoints.scss";
+
 .case-study-details {
   position: absolute;
   top: 0;
@@ -30,17 +32,31 @@
 .case-study-details__contain {
   padding: 4rem 2rem 2rem;
   max-width: 768px;
-  margin: 0 auto;  
+  margin: 0 auto; 
+
+  @media screen and (max-width: $breakpoint__mobile--max) {
+     padding-left: 0.75rem;
+     padding-right: 0.75rem;
+  } 
 }
 
 // Text
 .case-study-details__title {
   font-size: 4rem;
   margin-bottom: 1.5rem;
+
+  @media screen and (max-width: $breakpoint__mobile--max) {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .case-study-details__summary {
   font-size: 1.5rem;
+
+  @media screen and (max-width: $breakpoint__mobile--max) {
+    font-size: 1rem;
+  }
 }
 
 .case-study-details__info-row {
