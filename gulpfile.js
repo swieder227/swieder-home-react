@@ -70,16 +70,13 @@ gulp.task('scssDev', function(){
     .pipe(gulp.dest(PATH.SCSS_OUT_DEV))
 });
 
-gulp.task('inlineCriticalCSS', function(){
-  // gulp.src(PATH.CSS_CRITICAL_IN)
-  //   .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-  //   .pipe(concat('critical.css'))
-  //   .pipe(gulp.dest(PATH.SCSS_OUT_DEV))
-
-  gulp.src('src/views/index.dev.html')
-    .pipe(inlinesource())
-    .pipe(concat('index.html'))
-    .pipe(gulp.dest('src/views/'))
+gulp.task('criticalCSSDev', function(){
+  // Save a dev version 
+  gulp.src(PATH.CSS_CRITICAL_IN)
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(concat('critical.css'))
+    .pipe(gulp.dest(PATH.SCSS_OUT_DEV))
 });
 
 function handleErrors() {
@@ -135,13 +132,19 @@ gulp.task("watchDev", function(){
   });
 
   watch(PATH.CSS_CRITICAL_IN, function(){
-    gulp.start('inlineCriticalCSS')
+    gulp.start('criticalCSSDev');
   });
   
 });
 
 gulp.task('buildProd', function(){
   
+  // html: inline css into view
+  gulp.src('src/views/index.dev.html')
+    .pipe(inlinesource())
+    .pipe(concat('index.html'))
+    .pipe(gulp.dest('src/views/'))
+
   // scss: compress, autoprefix, concat
   gulp.src(PATH.SCSS_SRC)
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
