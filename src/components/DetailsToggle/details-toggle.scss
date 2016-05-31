@@ -41,6 +41,10 @@
 
 .details-toggle__target {
   top: 2rem;
+
+  @media screen and (max-width: $breakpoint__mobile--max) {
+    top: 1.5rem;
+  }
 }
 .details-toggle__start {
   bottom: 2rem;

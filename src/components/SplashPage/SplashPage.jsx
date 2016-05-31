@@ -13,9 +13,9 @@ class SplashPage extends React.Component {
 
     this.outstanding_queue = 0;
 
-    this.min_time = NODE_ENV == "development" ? 250 : 2000;
+    this.min_time = NODE_ENV == "development" ? 250 : 2500;
     this.min_time_fulfilled = false;
-    this.max_time = 4000;
+    this.max_time = 4200;
   }
 
   static getStores(props) {
