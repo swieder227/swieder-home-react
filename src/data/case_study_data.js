@@ -56,7 +56,7 @@ export const case_study_data = [
     date: "Feb 2016",
     client: "23 Stories Technology",
     role: "UX Designer, Front-End Engineer",
-    hero_img: "./assets/case_discovery_home.jpg",
+    hero_img: "./assets/case_discovery_app.jpg",
     launch_url: "http://www.glcuncharted.com/",
     sections: [
       {
@@ -65,21 +65,36 @@ export const case_study_data = [
         heading: "Designing to Solve a Business Use Case",
         body: "The technology team is often approached with requests for a particular feature:\n\"We're preparing a pitch using AR, do have more examples?\", or\n\"Do you have any inspiration for long form parallax articles?\"\nAs a creative technology team, we share these examples daily, but they're often lost in the ether of email backlogs. Discovery is intended to be a platform to archive and share these executions."
       },
-      // PICTURE OF NOTEBOOK SKETCHES
+      {
+        id: "1_4",
+        template: "image",
+        url: "./assets/case_discovery_sketch.jpg",
+        bg_size: "cover"
+      },
       {
         id: "1_1",
         template: "paragraph",
         heading: "UX User Stories",
         body: "My first task was designing the front-end web app, focusing on user experience. I interviewed key users, asking them to talk through their business challenges and usage scenarios.\nI took those learnings and created wireframes of the application architecture and user flow. After revisions and feedback, then finally I introduced a visual design.\nTo me, design means \"make a great experience to solve a problem\", not \"make it pretty.\""
       },
-      // WIREFRAMES
+      {
+        id: "1_5",
+        template: "image",
+        url: "./assets/case_discovery_wireframe.jpg",
+        bg_size: "contain"
+      },
       {
         id: "1_2",
         template: "paragraph",
         heading: "Back-End & Front-End Coordination",
         body: "The software is two-part: 1. a Ruby on Rails CMS, and 2. an isomorphic Node and React web app. Building this platform was a very collaborative process between back-end and front-end developers. We worked together to create a code contract by defining the data models and RESTful endpoint structure.\nMy main responsibility was converting the wireframes into the fully responsive web app. However, I was able to dip down the stack and provide code reviews and pull requests for the back-end code.\nThe web app is a server-side rendered NodeJS app running ReactJS with ES6 goodies, authenticated user roles, filterable tagging, deep-linked routing, infinite scroll, slick animations and more."
       },
-      // APP
+      {
+        id: "1_6",
+        template: "image",
+        url: "./assets/case_discovery_bright.jpg",
+        bg_size: "cover"
+      },
       {
         id: "1_3",
         template: "paragraph",
@@ -96,7 +111,7 @@ export const case_study_data = [
     date: "Oct 2015",
     client: "TargetStyle x Vogue",
     role: "Lead Web Developer",
-    hero_img: "./assets/case_targetstyle_1.jpg",
+    hero_img: "./assets/case_targetstyle_home.jpg",
     launch_url: "http://origin.ads.thestudio.condenast.com/staging/targetstylemarketing/target_mobile/index.html",
     sections: [
       {
@@ -104,6 +119,12 @@ export const case_study_data = [
         template: "paragraph",
         heading: "Enhancing Prints Ads with Digital - Shazam!",
         body: "Print ads have been the same forever. We wanted to enhance the print advertisements in Vogue's biggest issue of the year by bringing to life a second-screen digital experience.\nWe teamed up with NYC-based creative agency Mother to ideate and build print ads triggerable by Shazam's image recognition. When scanned, a web app would open providing behind-the-scenes content in a delightful user interface."
+      },
+      {
+        id: "2_4",
+        template: "image",
+        url: "./assets/case_targetstyle_shazam.jpg",
+        bg_size: "cover"
       },
       {
         id: "2_1",
@@ -118,10 +139,22 @@ export const case_study_data = [
         body: "Transitioning from prototype to production was seamless. I continued building out a modular and javascript component-based architecture. The gesture recognition was built using the robust touch library HammerJS. And the three-dimensional timelines using Greensock. There were 20 stories with different content but similar structure. The reusable javascript class strucutre that I built allowed for maximum reusability and efficiency."
       },
       {
+        id: "2_5",
+        template: "image",
+        url: "./assets/case_targetstyle_ui.jpg",
+        bg_size: "cover"
+      },
+      {
         id: "2_3",
         template: "paragraph",
         heading: "Industry Buzz",
         body: "The launch of TargetStyle aligned with the Vogue September Issue. On the front-cover was Beyonce and the back-cover was our first ad (talk about competition!), as well as several other full page spreads.\nSocial media engagement went through the roof as we saw a lot of comments and shares. Industry media took notice and we saw great feedback from writers at Digiday, The New York Times, Forbes, and more."
+      },
+      {
+        id: "2_6",
+        template: "image",
+        url: "./assets/case_targetstyle_press.jpg",
+        bg_size: "contain"
       },
     ]
   },
