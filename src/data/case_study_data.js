@@ -57,7 +57,7 @@ export const case_study_data = [
     client: "23 Stories Technology",
     role: "UX Designer, Front-End Engineer",
     hero_img: "./assets/case_discovery_app.jpg",
-    launch_url: "http://www.glcuncharted.com/",
+    launch_url: "https://github.com/swieder227/disco",
     sections: [
       {
         id: "1_0",
@@ -176,16 +176,34 @@ export const case_study_data = [
         body: "Business tools are meant to facilitate business goals. However, if a digital tool's UI is more of a hinderance than a help, than you've got a problem.\nIn this case, the client had a useful database of information, but an outdated Flash application that was confusing and cumbersome. My first task was to diagnose the underlying UX issues and redesign the interface with the client's goals in mind.\nI took steps to gather user feedback. The primary approach was to interview key stakeholders and users of the application. I asked them questions, such as: what's your main business objective? Or, what do you imagine the purpose of this tool to be? And, what obstacles do you find in the current iteration? In addition to that, I created a brief survey to gather intel from more sources who did not have time for a full interview."
       },
       {
+        id: "3_3",
+        template: "image",
+        url: "./assets/case_coke_wires.jpg",
+        bg_size: "contain"
+      },
+      {
         id: "3_1",
         template: "paragraph",
         heading: "A UX-Driven Responsive Redesign",
         body: "Combininig all of our user feedback with our best practices and experience, I created wireframes of the new UI. Every design decision was made for a reason and with a specific goal.\nI then created an animated motion prototype in order to better illustrate the interaction design to the client. I find that static mockups can be hard to understand and this type of visual prototype gives the client a better understanding of how the digital experience will function.\nAfter layout and interaction were agreed upon, I gave the visual design a much needed face-lift and implenented their newest branding guidelines."
       },
       {
+        id: "3_4",
+        template: "image",
+        url: "./assets/case_coke_designs.jpg",
+        bg_size: "contain"
+      },
+      {
         id: "3_2",
         template: "paragraph",
         heading: "Building a Responsive Web App",
         body: "Lastly, I built the front-end web app. The UI was data-driven and modular, so we agreed ReactJS was a good choice. I implemented the designs to spec and worked in conjunction with their back-end developer to pipe in the database layer.\nThe client was extremely happy and acknowledged that we succeeded in creating a more useful sales tool. The UX redesign was a success and they've got a rebuilt, modern web app to continue using and improving over time."
+      },
+      {
+        id: "3_5",
+        template: "image",
+        url: "./assets/case_coke_map.jpg",
+        bg_size: "contain"
       },
     ]
   }
