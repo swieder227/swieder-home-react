@@ -58,6 +58,20 @@
   transform: translateX(20%);
 }
 
+// Animate Text when sliding in 
+.case-study-hero__slide-rtl-enter,
+.case-study-hero__slide-ltr-enter {
+  .case-study-hero__text {
+    opacity: 0;
+  }
+}
+.case-study-hero__slide-rtl-enter-active,
+.case-study-hero__slide-ltr-enter-active {
+  .case-study-hero__text {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.6s;
+  }
+}
 
 // Text
 .case-study-hero__text {
