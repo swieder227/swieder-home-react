@@ -65,7 +65,7 @@ export default class CaseStudyDetailToggle extends React.Component {
     }
 
     // Change text of btn based on state
-    let btn_text = this.props.show_details ? "Close" : "Read More";
+    let btn_text = this.props.show_details ? "Go Back" : "Read More";
 
     // Calculate transform % and apply to btn
     let btn_translate_y = this.props.show_details ? this.getTranslateOffset() : 0;
@@ -77,6 +77,11 @@ export default class CaseStudyDetailToggle extends React.Component {
       <div className="details-toggle">
         <div className={btn_class} ref="main_btn" style={main_btn_style} onClick={this.handleClick.bind(this)}>
           <BtnChipArticleDown add_class="btn-chip--article-down btn-chip--detail-toggle" view_box="0 0 13 22" width="13px" height="22px"/>
+          <div className="detail-toggle__text-contain">
+            <div className="detail-toggle__text">
+              {btn_text}
+            </div>
+          </div>
         </div>
         <div className="details-toggle__target" ref="target_btn" />
         <div className="details-toggle__start" ref="start_btn" />
