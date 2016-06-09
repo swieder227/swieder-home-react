@@ -72,7 +72,7 @@ class PortfolioSlider extends React.Component {
     return (
       <div className="portfolio-slider">        
           <div className="portfolio-slider__hero">
-            <ReactCSSTransitionGroup transitionName={hero_anim_dir} transitionEnterTimeout={700} transitionLeaveTimeout={700}>
+            <ReactCSSTransitionGroup transitionName={hero_anim_dir} transitionEnterTimeout={1000} transitionLeaveTimeout={1000}>
               {module_hero}
             </ReactCSSTransitionGroup>
           </div>
