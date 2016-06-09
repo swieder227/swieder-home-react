@@ -6,6 +6,7 @@ import connectToStores from 'alt-utils/lib/connectToStores';
 import PortfolioStore from '../../js/stores/PortfolioStore';
 import PortfolioActions from '../../js/actions/PortfolioActions';
 
+import ContactCard from '../ContactCard/ContactCard'
 import CaseStudyHero from '../CaseStudyHero/CaseStudyHero';
 import CaseStudyDetails from '../CaseStudyDetails/CaseStudyDetails';
 import DetailsToggle from '../DetailsToggle/DetailsToggle';
@@ -92,6 +93,7 @@ class PortfolioSlider extends React.Component {
           <div className="portfolio-slider__toggle-btn">
             <DetailsToggle click_callback={this.toggleShowDetails.bind(this)} show_details={this.state.show_details} />
           </div>
+          {/*<ContactCard />*/}
       </div>
     )
   }

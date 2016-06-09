@@ -10,6 +10,18 @@ export function detectIsNode() {
   return typeof window === "undefined"
 }
 
+export function detectIsMobile(){
+    if(detectIsNode()){
+        console.error("Trying to detect mobile on server-side");
+    } else {
+        if(window.innerWidth < 768){
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
 /*
 ** DOM Positioning
 */

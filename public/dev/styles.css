@@ -73,60 +73,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-weight: 400; }
 
-.btn-chip {
-  position: relative;
-  cursor: pointer;
-  width: 45px;
-  height: 45px; }
-  .btn-chip:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-    transition: fill 0.4s ease-out 0s, transform 0.38s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s;
-    transform: scale(1); }
-  .btn-chip:hover:before {
-    background-color: #2788e2;
-    transform: scale(1.1); }
-
-.btn-chip__icon {
-  position: relative;
-  fill: #2788e2; }
-  .btn-chip:hover .btn-chip__icon {
-    fill: #fff; }
-
-/* Custom Classes */
-.btn-chip--article-down {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .btn-chip--article-down .btn-chip__icon {
-    top: 0;
-    transition: top 0.3s ease-out 0s; }
-  .btn-chip--article-down .btn-chip__translate {
-    transition: transform 0.3s ease-out 0s;
-    transform: translateY(0px); }
-  .btn-chip--article-down:hover .btn-chip__icon {
-    top: -3px; }
-  .btn-chip--article-down:hover .btn-chip__translate {
-    transform: translateY(7px); }
-
-.btn-chip--detail-toggle {
-  z-index: 100; }
-
-.details-toggle__main-btn--open .btn-chip--detail-toggle .btn-chip__icon {
-  transition: transform 0.3s ease-out 0.2s, top 0.3s ease-out 0.3s;
-  top: 4px;
-  transform: rotate(180deg); }
-
-.details-toggle__main-btn--open .btn-chip--detail-toggle .btn-chip__translate {
-  transform: translateY(10px); }
-
 .case-study-hero {
   position: absolute;
   top: 0;
@@ -213,6 +159,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
   line-height: 1.4;
   margin: 0; }
+
+.contact-card {
+  position: fixed;
+  z-index: 1000;
+  top: 2rem;
+  right: 2rem; }
 
 .case-study-details {
   position: absolute;
@@ -345,15 +297,59 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
     transition: opacity 0.31s ease-out 0.28s; }
 
+.btn-chip {
+  position: relative;
+  cursor: pointer;
+  width: 45px;
+  height: 45px; }
+  .btn-chip:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    transition: fill 0.4s ease-out 0s, transform 0.38s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s;
+    transform: scale(1); }
+  .btn-chip:hover:before {
+    background-color: #2788e2;
+    transform: scale(1.1); }
 
-.lazy-background-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-repeat: no-repeat;
-  background-position: center; }
+.btn-chip__icon {
+  position: relative;
+  fill: #2788e2; }
+  .btn-chip:hover .btn-chip__icon {
+    fill: #fff; }
+
+/* Custom Classes */
+.btn-chip--article-down {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .btn-chip--article-down .btn-chip__icon {
+    top: 0;
+    transition: top 0.3s ease-out 0s; }
+  .btn-chip--article-down .btn-chip__translate {
+    transition: transform 0.3s ease-out 0s;
+    transform: translateY(0px); }
+  .btn-chip--article-down:hover .btn-chip__icon {
+    top: -3px; }
+  .btn-chip--article-down:hover .btn-chip__translate {
+    transform: translateY(7px); }
+
+.btn-chip--detail-toggle {
+  z-index: 100; }
+
+.details-toggle__main-btn--open .btn-chip--detail-toggle .btn-chip__icon {
+  transition: transform 0.3s ease-out 0.2s, top 0.3s ease-out 0.3s;
+  top: 4px;
+  transform: rotate(180deg); }
+
+.details-toggle__main-btn--open .btn-chip--detail-toggle .btn-chip__translate {
+  transform: translateY(10px); }
 
 
 .portfolio-slider {
@@ -401,6 +397,17 @@ h1, h2, h3, h4, h5, h6 {
   .portfolio-slider__toggle-btn > * {
     pointer-events: auto; }
 
+
+.lazy-background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+
 .single-image {
   position: relative;
   background-size: cover;
@@ -409,6 +416,5 @@ h1, h2, h3, h4, h5, h6 {
   height: 450px;
   height: 30vw;
   min-height: 375px; }
-
 
 /*# sourceMappingURL=styles.css.map */

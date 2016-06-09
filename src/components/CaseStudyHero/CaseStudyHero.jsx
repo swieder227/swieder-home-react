@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {detectIsMobile} from '../../js/utils.js';
+
 export default class CaseStudyHero extends React.Component {
   constructor() {
     super();
@@ -9,7 +11,7 @@ export default class CaseStudyHero extends React.Component {
     anim_out_state: React.PropTypes.bool.isRequired,
     heading: React.PropTypes.string.isRequired,
     subheading: React.PropTypes.string.isRequired,
-    hero_img: React.PropTypes.string.isRequired
+    hero_img: React.PropTypes.objectOf(React.PropTypes.string.isRequired).isRequired
   };
 
   render() {
@@ -19,8 +21,10 @@ export default class CaseStudyHero extends React.Component {
       case_study_text_class += " case-study-hero__text--fade-out"
     }
 
+    let img_size = detectIsMobile() ? 'small' : 'large';
+
     let hero_img_style = {
-      backgroundImage: `url(${this.props.hero_img})`
+      backgroundImage: `url(${this.props.hero_img[img_size]})`
     }
 
     return (

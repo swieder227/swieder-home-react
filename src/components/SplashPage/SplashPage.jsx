@@ -3,7 +3,7 @@ import React from 'react';
 import connectToStores from 'alt-utils/lib/connectToStores';
 import PortfolioStore from '../../js/stores/PortfolioStore';
 
-import {detectIsNode, NODE_ENV} from '../../js/utils.js';
+import {detectIsNode, detectIsMobile, NODE_ENV} from '../../js/utils.js';
 
 import Introduction from '../Introduction/Introduction';
 
@@ -55,13 +55,15 @@ class SplashPage extends React.Component {
   preloadImages() {
     // Preload 
     const img_array = this.props.preload_img_array;
+    const img_size = detectIsMobile() ? 'small' : 'large';
 
     for (var i = 0; i < img_array.length; i++) {
       
       this.queueAdd();
       let img = new Image();
-      img.src = img_array[i];
+      img.src = img_array[i][img_size];
       img.onload = this.queueRemove();
+      console.log("preloading:", img.src);
 
     }
   }

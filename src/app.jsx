@@ -9,7 +9,6 @@ export default class App extends React.Component {
       <div>
         
         {/* Static. E.g. may be replaced with a <Header /> Component */}
-        {/*<GlobalNav history={this.props.history} />*/}
         
         {/* Dynamic content decided by the Router */}
         <div id="site__router">

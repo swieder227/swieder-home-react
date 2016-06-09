@@ -7,7 +7,7 @@ export const case_study_data = [
     date: "Sep 2015",
     client: "23 Stories x Conde Nast",
     role: "Lead Web Developer",
-    hero_img: "./assets/case_23_home.jpg",
+    hero_img: {large: "./assets/case_23_home.jpg", small: "./assets/la_style_sm.jpg"},
     launch_url: "http://www.23stories.com/",
     sections: [
       {
@@ -56,7 +56,7 @@ export const case_study_data = [
     date: "Feb 2016",
     client: "23 Stories Technology",
     role: "UX Designer, Front-End Engineer",
-    hero_img: "./assets/case_discovery_app.jpg",
+    hero_img: {large: "./assets/case_discovery_app.jpg", small: "./assets/la_style_sm.jpg"},
     launch_url: "https://github.com/swieder227/disco",
     sections: [
       {
@@ -111,7 +111,7 @@ export const case_study_data = [
     date: "Oct 2015",
     client: "TargetStyle x Vogue",
     role: "Lead Web Developer",
-    hero_img: "./assets/case_targetstyle_home.jpg",
+    hero_img: {large: "./assets/case_targetstyle_home.jpg", small: "./assets/la_style_sm.jpg"},
     launch_url: "http://origin.ads.thestudio.condenast.com/staging/targetstylemarketing/target_mobile/index.html",
     sections: [
       {
@@ -166,7 +166,7 @@ export const case_study_data = [
     date: "Dec 2015",
     client: "Coca-Cola x Octagon",
     role: "UX Designer, Front-End Developer",
-    hero_img: "./assets/case_coke_1.jpg",
+    hero_img: {large: "./assets/case_coke_1.jpg", small: "./assets/la_style_sm.jpg"},
     launch_url: "",
     sections: [
       {
