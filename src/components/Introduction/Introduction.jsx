@@ -8,9 +8,9 @@ export default class Introduction extends React.Component {
   constructor() {
     super();
 
-    this.names = ["a Creative", "a Coder", "an Innovator", "a Problem-Solver", "a Tinkerer", "a Collaborator", "a UX Expert", "a Technologist", "a Software Architect", "a Brogrammer", "an Extrovert", "a Strategist"];
+    this.names = ["a Creative", "an Engineer", "an Innovator", "a Problem-Solver", "a Collaborator", "a UX Designer", "a Technologist", "a Software Architect", "a Brogrammer"];
     shuffleArray(this.names);
-    
+    this.names.unshift("still loading...");
   }
 
   render() {

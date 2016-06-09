@@ -82,7 +82,7 @@ $introduction__font-size: 4rem;
 // ...etc
 // 
 $name_height: 4rem;
-$names_max: 12;
+$names_max: 10;
 $animation_duration: 1.1s;
 $initial_delay: 0.33s;
 @keyframes name_translate {
@@ -130,7 +130,7 @@ $initial_delay: 0.33s;
 
   // fade in and out with a cascading delay. 
   // corresponds with introduction__name-translate
-  @for $i from 1 through ($names_max + 1) {
+  @for $i from 1 through ($names_max) {
     &:nth-child( #{$names_max - $i} ){
       animation-delay: $i * $animation_duration + $initial_delay;
     }

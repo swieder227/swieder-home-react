@@ -8,7 +8,7 @@ export const case_study_data = [
     client: "23 Stories x Conde Nast",
     role: "Lead Web Developer",
     hero_img: "./assets/case_23_home.jpg",
-    launch_url: "http://23stories.com/",
+    launch_url: "http://www.23stories.com/",
     sections: [
       {
         id: "0_0",

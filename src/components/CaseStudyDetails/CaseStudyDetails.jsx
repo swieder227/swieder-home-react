@@ -37,7 +37,7 @@ export default class CaseStudyDetails extends React.Component {
       
     });
 
-    let launch_btn = this.props.launch_url ? <a className="site__button" href={this.props.launch_url} target="_blank">LAUNCH</a> : <div className="site__button site__button--disabled">PUBLIC SITE UNAVAILABLE</div>;
+    let launch_btn = this.props.launch_url ? <a className="site__button" href={this.props.launch_url} target="_blank">LAUNCH SITE</a> : <div className="site__button site__button--disabled">PUBLIC SITE UNAVAILABLE</div>;
 
     return (
       <div className="case-study-details">
