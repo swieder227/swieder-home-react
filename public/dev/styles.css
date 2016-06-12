@@ -73,11 +73,112 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', 'Arial', sans-serif;
   font-weight: 400; }
 
-.contact-card {
-  position: fixed;
-  z-index: 1000;
-  top: 2rem;
-  right: 2rem; }
+.btn-chip {
+  position: relative;
+  cursor: pointer;
+  width: 45px;
+  height: 45px; }
+  .btn-chip:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    transition: fill 0.4s ease-out 0s, transform 0.38s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s;
+    transform: scale(1); }
+  .btn-chip:hover:before {
+    background-color: #2788e2;
+    transform: scale(1.1); }
+
+.btn-chip__icon {
+  position: relative;
+  fill: #2788e2; }
+  .btn-chip:hover .btn-chip__icon {
+    fill: #fff; }
+
+/* Custom Classes */
+.btn-chip--article-down {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .btn-chip--article-down .btn-chip__icon {
+    top: 0;
+    transition: top 0.3s ease-out 0s; }
+  .btn-chip--article-down .btn-chip__translate {
+    transition: transform 0.3s ease-out 0s;
+    transform: translateY(0px); }
+  .btn-chip--article-down:hover .btn-chip__icon {
+    top: -3px; }
+  .btn-chip--article-down:hover .btn-chip__translate {
+    transform: translateY(7px); }
+
+.case-study-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  overflow: auto; }
+
+.case-study-details__slide-enter {
+  transform: translateY(100%); }
+
+.case-study-details__slide-enter-active {
+  transition: transform 0.5s ease-out 0s;
+  transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) 0.6s;
+  transform: translateY(0px); }
+
+.case-study-details__slide-leave {
+  transform: translateY(0px); }
+
+.case-study-details__slide-leave-active {
+  transition: transform 0.5s ease-out 0s;
+  transform: translateY(100%); }
+
+.case-study-details__contain {
+  padding: 4rem 2rem 2rem;
+  max-width: 768px;
+  margin: 0 auto; }
+  @media screen and (max-width: 600px) {
+    .case-study-details__contain {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem; } }
+
+.case-study-details__title {
+  font-size: 4rem;
+  margin-bottom: 1.5rem; }
+  @media screen and (max-width: 600px) {
+    .case-study-details__title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem; } }
+
+.case-study-details__summary {
+  font-size: 1.5rem; }
+  @media screen and (max-width: 600px) {
+    .case-study-details__summary {
+      font-size: 1.2rem; } }
+
+.case-study-details__info-row {
+  margin-bottom: 0.7rem; }
+
+.case-study-details__info-type {
+  margin-right: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px; }
+
+.case-study-details__info-value,
+.case-study-details__info-type {
+  margin: 0; }
+
+.site__divider--case-study-info {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
 
 .case-study-hero {
   position: absolute;
@@ -166,112 +267,11 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4;
   margin: 0; }
 
-.case-study-details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: white;
-  overflow: auto; }
-
-.case-study-details__slide-enter {
-  transform: translateY(100%); }
-
-.case-study-details__slide-enter-active {
-  transition: transform 0.5s ease-out 0s;
-  transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) 0.6s;
-  transform: translateY(0px); }
-
-.case-study-details__slide-leave {
-  transform: translateY(0px); }
-
-.case-study-details__slide-leave-active {
-  transition: transform 0.5s ease-out 0s;
-  transform: translateY(100%); }
-
-.case-study-details__contain {
-  padding: 4rem 2rem 2rem;
-  max-width: 768px;
-  margin: 0 auto; }
-  @media screen and (max-width: 600px) {
-    .case-study-details__contain {
-      padding-left: 0.75rem;
-      padding-right: 0.75rem; } }
-
-.case-study-details__title {
-  font-size: 4rem;
-  margin-bottom: 1.5rem; }
-  @media screen and (max-width: 600px) {
-    .case-study-details__title {
-      font-size: 2.5rem;
-      margin-bottom: 1rem; } }
-
-.case-study-details__summary {
-  font-size: 1.5rem; }
-  @media screen and (max-width: 600px) {
-    .case-study-details__summary {
-      font-size: 1.2rem; } }
-
-.case-study-details__info-row {
-  margin-bottom: 0.7rem; }
-
-.case-study-details__info-type {
-  margin-right: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px; }
-
-.case-study-details__info-value,
-.case-study-details__info-type {
-  margin: 0; }
-
-.site__divider--case-study-info {
-  margin-top: 2rem;
-  margin-bottom: 2rem; }
-
-.btn-chip {
-  position: relative;
-  cursor: pointer;
-  width: 45px;
-  height: 45px; }
-  .btn-chip:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
-    transition: fill 0.4s ease-out 0s, transform 0.38s cubic-bezier(0.18, 0.89, 0.32, 1.28) 0s;
-    transform: scale(1); }
-  .btn-chip:hover:before {
-    background-color: #2788e2;
-    transform: scale(1.1); }
-
-.btn-chip__icon {
-  position: relative;
-  fill: #2788e2; }
-  .btn-chip:hover .btn-chip__icon {
-    fill: #fff; }
-
-/* Custom Classes */
-.btn-chip--article-down {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .btn-chip--article-down .btn-chip__icon {
-    top: 0;
-    transition: top 0.3s ease-out 0s; }
-  .btn-chip--article-down .btn-chip__translate {
-    transition: transform 0.3s ease-out 0s;
-    transform: translateY(0px); }
-  .btn-chip--article-down:hover .btn-chip__icon {
-    top: -3px; }
-  .btn-chip--article-down:hover .btn-chip__translate {
-    transform: translateY(7px); }
+.contact-card {
+  position: fixed;
+  z-index: 1000;
+  top: 2rem;
+  right: 2rem; }
 
 .details-toggle__main-btn {
   position: absolute;
@@ -360,6 +360,15 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity 0.31s ease-out 0.28s; }
 
 
+.lazy-background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center; }
+
 
 .portfolio-slider {
   z-index: 100;
@@ -405,15 +414,6 @@ h1, h2, h3, h4, h5, h6 {
   pointer-events: none; }
   .portfolio-slider__toggle-btn > * {
     pointer-events: auto; }
-
-.lazy-background-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-repeat: no-repeat;
-  background-position: center; }
 
 .single-image {
   position: relative;
