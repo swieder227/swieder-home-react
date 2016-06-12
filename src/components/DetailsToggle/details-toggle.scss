@@ -50,6 +50,33 @@
   bottom: 2rem;
 }
 
+// Add some "padding" to the right of the btn to trigger hove
+.btn-chip--detail-toggle:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 9rem;
+}
+
+// Adds flip to detail toggle 
+.btn-chip--detail-toggle {
+  z-index: 100;
+}
+.details-toggle__main-btn--open .btn-chip--detail-toggle {
+  
+  .btn-chip__icon {
+    transition: transform 0.3s ease-out 0.2s, top 0.3s ease-out 0.3s;
+    top: 4px;
+    transform: rotate(180deg);
+  }
+
+  .btn-chip__translate {
+    transform: translateY(10px);
+  }
+}
+
 .detail-toggle__text-contain {
   position: absolute;
   background: $color__primary;
