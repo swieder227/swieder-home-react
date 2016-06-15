@@ -1,5 +1,36 @@
 export const case_study_data = [
   {
+    id: "99",
+    heading: "Welcome!",
+    subheading: "I'd love to share some of my work, or happy to get in contact about business or pleasure.",
+    summary: "A motivated creative technologist with a unique versatility of technical skills, creative aptitude, and business acumen.",
+    date: "1991 - Now",
+    client: "Possibly You?",
+    role: "Creative Technologist, Software Engineer",
+    hero_img: {large: "./assets/headshot_magic.jpg", small: "./assets/headshot_magic--sm.jpg"},
+    launch_url: false,
+    sections: [
+      {
+        id: "99_1",
+        template: "paragraph",
+        heading: "Check Out My Work",
+        body: "Thanks for making it this far.\nOn this site I've compiled some of my best work. I've provided direct links when available, and written about my experience and learnings."
+      },
+      {
+        id: "99_0",
+        template: "paragraph",
+        heading: "Get In Touch!",
+        body: "Hiring? Just want to chat?\nEither way, I'm happy to have a conversation. Grab my email or twitter and drop me a note."
+      },
+      {
+        id: "0_4",
+        template: "image",
+        url: "./assets/la_style_sm.jpg",
+        bg_size: "cover"
+      },
+    ]
+  },
+  {
     id: "0",
     heading: "23 Stories",
     subheading: "Conde Nast Media Group becomes 23 Stories.",
@@ -7,7 +38,7 @@ export const case_study_data = [
     date: "Sep 2015",
     client: "23 Stories x Conde Nast",
     role: "Lead Web Developer",
-    hero_img: {large: "./assets/case_23_home.jpg", small: "./assets/case_23_home--sm.jpg"},
+    hero_img: {large: "./assets/case_23_about.jpg", small: "./assets/case_23_about--sm.jpg"},
     launch_url: "http://www.23stories.com/",
     sections: [
       {
@@ -167,7 +198,7 @@ export const case_study_data = [
     client: "Coca-Cola x Octagon",
     role: "UX Designer, Front-End Developer",
     hero_img: {large: "./assets/case_coke_1.jpg", small: "./assets/case_coke_1--sm.jpg"},
-    launch_url: "",
+    launch_url: false,
     sections: [
       {
         id: "3_0",

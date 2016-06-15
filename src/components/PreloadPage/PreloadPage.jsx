@@ -7,7 +7,7 @@ import {detectIsNode, detectIsMobile, NODE_ENV} from '../../js/utils.js';
 
 import Introduction from '../Introduction/Introduction';
 
-class SplashPage extends React.Component {
+class PreloadPage extends React.Component {
   constructor() {
     super();
 
@@ -53,11 +53,11 @@ class SplashPage extends React.Component {
   }
 
   preloadImages() {
-    // Preload 
+    
     const img_array = this.props.preload_img_array;
     const img_size = detectIsMobile() ? 'small' : 'large';
 
-    for (var i = 0; i < img_array.length; i++) {
+    for (var i = img_array.length - 1; i >= 0; i--) {
       
       this.queueAdd();
       let img = new Image();
@@ -111,4 +111,4 @@ class SplashPage extends React.Component {
 
 }
 
-export default SplashPage = connectToStores(SplashPage);
+export default PreloadPage = connectToStores(PreloadPage);

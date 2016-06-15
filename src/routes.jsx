@@ -4,14 +4,12 @@ import ReactDOM from 'react-dom';
 import App from './app.jsx';
 import {Router, Route, IndexRoute} from 'react-router';
 
-import SplashPage from './components/SplashPage/SplashPage';
+import PreloadPage from './components/PreloadPage/PreloadPage';
 import PortfolioSlider from './components/PortfolioSlider/PortfolioSlider';
 
 export default (
   <Route path="/" component={App}>
-    <IndexRoute component={SplashPage} />
+    <IndexRoute component={PreloadPage} />
     <Route path="portfolio" component={PortfolioSlider} />
-    {/*<Route path="connected" component={ExampleConnectedToStore} />
-    <Route path="pure" component={ExamplePureContainer} />*/}
   </Route>
 );
