@@ -4,6 +4,7 @@ var path = require('path');
 var logger = require('morgan');
 var favicon = require('serve-favicon');
 var servestatic = require('serve-static');
+var compression = require('compression');
 
 // Read .env config variables
 require('dotenv').config();
@@ -27,6 +28,7 @@ var ip = '0.0.0.0';
 var port = 8080;
 var app = express();
 
+app.use(compression());
 app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname,'src/views'));

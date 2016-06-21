@@ -289,7 +289,8 @@ h1, h2, h3, h4, h5, h6 {
   right: 2rem; }
   @media screen and (max-width: 600px) {
     .contact-card {
-      right: 0.75rem; } }
+      right: 0.75rem;
+      top: 1.5rem; } }
 
 .contact-card__content {
   position: absolute;
@@ -410,6 +411,16 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity 0.31s ease-out 0.28s; }
 
 
+
+.lazy-background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center; }
+
 .portfolio-slider {
   z-index: 500;
   overflow: hidden; }
@@ -450,16 +461,6 @@ h1, h2, h3, h4, h5, h6 {
   .portfolio-slider__toggle-btn > * {
     pointer-events: auto; }
 
-
-
-.lazy-background-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-repeat: no-repeat;
-  background-position: center; }
 
 .single-image {
   position: relative;
