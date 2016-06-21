@@ -1,8 +1,8 @@
 export const case_study_data = [
   {
     id: "99",
-    heading: "Welcome!",
-    subheading: "I'd love to share some of my work, or happy to get in contact about business or pleasure.",
+    heading: "Howdy Partner!",
+    subheading: "Welcome to my creative technology portfolio. Like what you see? Let's get in touch.",
     summary: "A motivated creative technologist with a unique versatility of technical skills, creative aptitude, and business acumen.",
     date: "1991 - Now",
     client: "Possibly You?",
@@ -14,13 +14,13 @@ export const case_study_data = [
         id: "99_1",
         template: "paragraph",
         heading: "Check Out My Work",
-        body: "Thanks for making it this far.\nOn this site I've compiled some of my best work. I've provided direct links when available, and written about my experience and learnings."
+        body: "Welcome to my site.\nI built this portfolio to compile some of my best work. In order to provide insight into my professional development practices, I've written up case studies for each project. "
       },
       {
         id: "99_0",
         template: "paragraph",
         heading: "Get In Touch!",
-        body: "Hiring? Just want to chat?\nEither way, I'm happy to have a conversation. Grab my email or twitter and drop me a note."
+        body: "Hiring? Just want to chat?\nFrom consulting to casual conversations, I'm happy to chat. Grab my contact info and let's make something happen."
       },
       {
         id: "0_4",
