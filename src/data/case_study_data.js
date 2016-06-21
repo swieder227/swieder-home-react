@@ -7,7 +7,7 @@ export const case_study_data = [
     date: "1991 - Now",
     client: "Possibly You?",
     role: "Creative Technologist, Software Engineer",
-    hero_img: {large: "./assets/headshot_magic.jpg", small: "./assets/headshot_magic--sm.jpg"},
+    hero_img: {large: "./assets/case_studies/headshot_magic.jpg", small: "./assets/case_studies/headshot_magic--sm.jpg"},
     launch_url: false,
     sections: [
       {
@@ -25,7 +25,7 @@ export const case_study_data = [
       {
         id: "0_4",
         template: "image",
-        url: "./assets/la_style_sm.jpg",
+        url: "./assets/case_studies/la_style_sm.jpg",
         bg_size: "cover"
       },
     ]
@@ -38,7 +38,7 @@ export const case_study_data = [
     date: "Sep 2015",
     client: "23 Stories x Conde Nast",
     role: "Lead Web Developer",
-    hero_img: {large: "./assets/case_23_about.jpg", small: "./assets/case_23_about--sm.jpg"},
+    hero_img: {large: "./assets/case_studies/case_23_about.jpg", small: "./assets/case_studies/case_23_about--sm.jpg"},
     launch_url: "http://www.23stories.com/",
     sections: [
       {
@@ -50,7 +50,7 @@ export const case_study_data = [
       {
         id: "0_4",
         template: "image",
-        url: "./assets/case_23_ms.jpg",
+        url: "./assets/case_studies/case_23_ms.jpg",
         bg_size: "contain"
       },
       {
@@ -62,7 +62,7 @@ export const case_study_data = [
       {
         id: "0_5",
         template: "image",
-        url: "./assets/case_23_cms.jpg",
+        url: "./assets/case_studies/case_23_cms.jpg",
         bg_size: "contain"
       },
       {
@@ -74,7 +74,7 @@ export const case_study_data = [
       {
         id: "0_6",
         template: "image",
-        url: "./assets/case_23_gsd.jpg",
+        url: "./assets/case_studies/case_23_gsd.jpg",
         bg_size: "cover"
       }
     ]
@@ -87,7 +87,7 @@ export const case_study_data = [
     date: "Feb 2016",
     client: "23 Stories Technology",
     role: "UX Designer, Front-End Engineer",
-    hero_img: {large: "./assets/case_discovery_app.jpg", small: "./assets/case_discovery_app--sm.jpg"},
+    hero_img: {large: "./assets/case_studies/case_discovery_app.jpg", small: "./assets/case_studies/case_discovery_app--sm.jpg"},
     launch_url: "https://github.com/swieder227/disco",
     sections: [
       {
@@ -99,7 +99,7 @@ export const case_study_data = [
       {
         id: "1_4",
         template: "image",
-        url: "./assets/case_discovery_sketch.jpg",
+        url: "./assets/case_studies/case_discovery_sketch.jpg",
         bg_size: "cover"
       },
       {
@@ -111,7 +111,7 @@ export const case_study_data = [
       {
         id: "1_5",
         template: "image",
-        url: "./assets/case_discovery_wireframe.jpg",
+        url: "./assets/case_studies/case_discovery_wireframe.jpg",
         bg_size: "contain"
       },
       {
@@ -123,7 +123,7 @@ export const case_study_data = [
       {
         id: "1_6",
         template: "image",
-        url: "./assets/case_discovery_bright.jpg",
+        url: "./assets/case_studies/case_discovery_bright.jpg",
         bg_size: "cover"
       },
       {
@@ -142,7 +142,7 @@ export const case_study_data = [
     date: "Oct 2015",
     client: "TargetStyle x Vogue",
     role: "Lead Web Developer",
-    hero_img: {large: "./assets/case_targetstyle_home.jpg", small: "./assets/case_targetstyle_home--sm.jpg"},
+    hero_img: {large: "./assets/case_studies/case_targetstyle_home.jpg", small: "./assets/case_studies/case_targetstyle_home--sm.jpg"},
     launch_url: "http://origin.ads.thestudio.condenast.com/staging/targetstylemarketing/target_mobile/index.html",
     sections: [
       {
@@ -154,7 +154,7 @@ export const case_study_data = [
       {
         id: "2_4",
         template: "image",
-        url: "./assets/case_targetstyle_shazam.jpg",
+        url: "./assets/case_studies/case_targetstyle_shazam.jpg",
         bg_size: "cover"
       },
       {
@@ -172,7 +172,7 @@ export const case_study_data = [
       {
         id: "2_5",
         template: "image",
-        url: "./assets/case_targetstyle_ui.jpg",
+        url: "./assets/case_studies/case_targetstyle_ui.jpg",
         bg_size: "cover"
       },
       {
@@ -184,7 +184,7 @@ export const case_study_data = [
       {
         id: "2_6",
         template: "image",
-        url: "./assets/case_targetstyle_press.jpg",
+        url: "./assets/case_studies/case_targetstyle_press.jpg",
         bg_size: "contain"
       },
     ]
@@ -197,7 +197,7 @@ export const case_study_data = [
     date: "Dec 2015",
     client: "Coca-Cola x Octagon",
     role: "UX Designer, Front-End Developer",
-    hero_img: {large: "./assets/case_coke_1.jpg", small: "./assets/case_coke_1--sm.jpg"},
+    hero_img: {large: "./assets/case_studies/case_coke_1.jpg", small: "./assets/case_studies/case_coke_1--sm.jpg"},
     launch_url: false,
     sections: [
       {
@@ -209,7 +209,7 @@ export const case_study_data = [
       {
         id: "3_3",
         template: "image",
-        url: "./assets/case_coke_wires.jpg",
+        url: "./assets/case_studies/case_coke_wires.jpg",
         bg_size: "contain"
       },
       {
@@ -221,7 +221,7 @@ export const case_study_data = [
       {
         id: "3_4",
         template: "image",
-        url: "./assets/case_coke_designs.jpg",
+        url: "./assets/case_studies/case_coke_designs.jpg",
         bg_size: "contain"
       },
       {
@@ -233,7 +233,7 @@ export const case_study_data = [
       {
         id: "3_5",
         template: "image",
-        url: "./assets/case_coke_map.jpg",
+        url: "./assets/case_studies/case_coke_map.jpg",
         bg_size: "contain"
       },
     ]

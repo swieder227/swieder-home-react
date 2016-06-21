@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var logger = require('morgan');
 var favicon = require('serve-favicon');
+var servestatic = require('serve-static');
 
 // Read .env config variables
 require('dotenv').config();
@@ -30,8 +31,17 @@ app.engine('html', swig.renderFile);
 app.set('view engine', 'html');
 app.set('views', path.join(__dirname,'src/views'));
 app.set('env', process.env.NODE_ENV || "development");
-app.use(express.static(path.join(__dirname,'public')));
 app.use(favicon(__dirname + '/public/assets/favicon.ico'));
+
+app.use(servestatic(__dirname + '/public', {
+  maxAge: 0,
+  setHeaders: setCustomCacheControl
+}));
+function setCustomCacheControl (res, path) {
+  if(servestatic.mime.lookup(path).indexOf("image") > -1){
+      res.setHeader('Cache-Control', 'public, max-age=86400000');
+  }
+}
 
 // Optional Dev configs
 if(app.get('env') == "development"){
