@@ -29,6 +29,12 @@
 * {
   box-sizing: border-box; }
 
+a:not(.site__button) {
+  color: #2788e2 !important;
+  text-decoration: none; }
+  a:not(.site__button):hover {
+    text-decoration: underline; }
+
 #site__router {
   position: absolute;
   top: 0;
@@ -189,12 +195,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
   margin-bottom: 2rem; }
 
-.contact-card {
-  position: fixed;
-  z-index: 1000;
-  top: 2rem;
-  right: 2rem; }
-
 .case-study-hero {
   position: absolute;
   top: 0;
@@ -281,6 +281,47 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5rem;
   line-height: 1.4;
   margin: 0; }
+
+.contact-card {
+  position: fixed;
+  z-index: 1000;
+  top: 2rem;
+  right: 2rem; }
+  @media screen and (max-width: 600px) {
+    .contact-card {
+      right: 0.75rem; } }
+
+.contact-card__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2rem; }
+
+.contact-card__info {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.5s ease 0s;
+  pointer-events: none; }
+  .contact-card__content--open .contact-card__info {
+    opacity: 1;
+    transition-delay: 0.4s;
+    pointer-events: auto; }
+
+.contact-card__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 2px 2rem 2px 2px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+  transform-origin: 85% 1rem;
+  transform: scale(0);
+  transition: transform 0.4s ease-out 0.35s; }
+  .contact-card__content--open .contact-card__bg {
+    transform: scale(1);
+    transition-delay: 0s; }
 
 .details-toggle__main-btn {
   position: absolute;
@@ -369,16 +410,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity 0.31s ease-out 0.28s; }
 
 
-.lazy-background-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-repeat: no-repeat;
-  background-position: center; }
-
-
 .portfolio-slider {
   z-index: 500;
   overflow: hidden; }
@@ -419,6 +450,16 @@ h1, h2, h3, h4, h5, h6 {
   .portfolio-slider__toggle-btn > * {
     pointer-events: auto; }
 
+
+
+.lazy-background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 .single-image {
   position: relative;
