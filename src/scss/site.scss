@@ -8,6 +8,15 @@ html, body {
   box-sizing: border-box;
 }
 
+a:not(.site__button) {
+  color: $color__primary !important;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 #site__router {
   position: absolute;
   top: 0;

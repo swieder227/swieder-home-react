@@ -93,7 +93,7 @@ class PortfolioSlider extends React.Component {
           <div className="portfolio-slider__toggle-btn">
             <DetailsToggle click_callback={this.toggleShowDetails.bind(this)} show_details={this.state.show_details} />
           </div>
-          {/*<ContactCard />*/}
+          <ContactCard />
       </div>
     )
   }
