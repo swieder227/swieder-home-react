@@ -5,7 +5,7 @@
         <title>Seth Wieder | Development - Design - UX</title>
         <meta name="description" content="The home page for Seth Wieder, and his portfolio of front-end web development, web design, and user experience. Check out the work and get in contact today!">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         {% if NODE_ENV == "development" %}
         <link rel="stylesheet" href="/dev/critical.css" />
         <link rel="stylesheet" href="/dev/styles.css" />
@@ -18,7 +18,7 @@
     <body>
         <!-- react.js UI - See App.jsx -->
         <div id="app">{{ html|safe }}</div>
-        
+
         <!-- env vars -->
         <script> window._env = { NODE_ENV: "{{NODE_ENV}}" } </script>
 
@@ -27,6 +27,17 @@
         <script src="/dev/build.js"></script>
         {% else %}
         <script src="/dist/build.min.js"></script>
+        <!-- Google Analytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-80778465-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
         {% endif %}
 
     </body>
